@@ -1,3 +1,2 @@
-language = "python3"
-run = "main.py"
-onBoot="echo Booting up!"
+run="python Parking.py"
+language="python3"
