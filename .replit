@@ -1,2 +1,2 @@
-run="python Parking.py"
+run="python main.py"
 language="python3"
