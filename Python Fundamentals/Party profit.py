@@ -22,4 +22,4 @@ for day in range(1, days + 1):
       coins -= companions * 2
   
    
-print(f'{companions} companions received {int(coins/companions)} coins for each') 
+print(f'{companions} companions received {int(coins/companions)} coins for each')
