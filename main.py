@@ -1,25 +1,18 @@
-companions = int(input())
-days = int(input())
+M = int(input())
+N = int(input())
 
-coins = 0
+K = int(input())
+L = int(input())
 
-for day in range(1, days + 1):
-  if day % 10 == 0:
-    companions -= 2
-
-  if day % 15 == 0:
-    companions += 5
-
-  coins += 50
-  coins -= companions * 2
-
-  if day % 3 == 0:
-    coins -= companions * 3
-
-  if day % 5 == 0:
-    coins += companions * 20
-    if day % 3 == 0:
-      coins -= companions * 2
-  
-   
-print(f'{companions} companions received {int(coins/companions)} coins for each') 
+for first in range(M, 10):
+  for second in range(9, N -1, -1):
+      if first % 2 == 0 and second % 2 == 1:
+          first_number = int(str(first) + str(second))
+          for first in range(K, 10):
+              for second in range(9, L -1, -1):
+                  if first % 2 == 0 and second % 2 == 1:
+                      second_number = int(str(first) + str(second))
+                      if first_number == second_number:
+                          print('Cannot change')
+                      else:
+                          print (f'{first_number} --> {second_number}')
