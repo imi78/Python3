@@ -11,5 +11,3 @@ for i in range(len(str_1)):
         else:
             counter += 1
             print(str_3)
-
-
