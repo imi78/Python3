@@ -50,6 +50,38 @@ def get_min_even(num_list):
     return min_even
 
 
+def first_even_count(num_list):  # if statements has to be introduced
+    first_even = []
+    for i in range(len(num_list)):
+        if num_list[i] % 2 == 0:
+            first_even.append(num_list[i])
+    return first_even
+
+
+def first_odd_count(num_list):  # if statements has to be introduced
+    first_odd = []
+    for i in range(len(num_list)):
+        if num_list[i] % 2 == 1:
+            first_odd.append(num_list[i])
+    return first_odd
+
+
+def last_even_count(num_list):   # if statements has to be introduced
+    last_even = []
+    for i in range(len(num_list)):
+        if num_list[i] % 2 == 0:
+            last_even.append(num_list[i])
+    return last_even
+
+
+def last_odd_count(num_list):   # if statements has to be introduced
+    last_odd = []
+    for i in range(len(num_list)):
+        if num_list[i] % 2 == 1:
+            first_odd.append(num_list[i])
+    return first_odd
+
+
 while command[0] != 'end':
     if command[0] == "exchange":
         index = int(command[1])
@@ -67,4 +99,24 @@ while command[0] != 'end':
         elif command[1] == 'even':
             even_min = get_min_even(array)
 
+    elif command[0] == 'first':
+        if command[2] == 'even':
+            count_even = first_even_count(array)
+        elif command[2] == 'odd':
+            count_odd = first_odd_count(array)
+
+    elif command[0] == 'last':
+        if command[2] == 'even':
+            count_even = last_even_count(array)
+        elif command[2] == 'odd':
+            count_odd = last_odd_count(array)
+
     command = input().split(' ')
+
+print(new_array)
+print(odd_max)
+print(odd_min)
+print(even_max)
+print(even_min)
+print(count_even)
+print(count_odd)
