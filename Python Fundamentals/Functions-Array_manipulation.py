@@ -1,4 +1,5 @@
 import sys
+
 array = input().split(" ")
 array = list(map(int, array))
 command = input().split(' ')
@@ -16,76 +17,95 @@ def exchange(num_list, index):  # Done! Tested!
 
 
 def get_max_odd(num_list):  # Done! Tested!
-    max_odd = 0
+    max_odd_index = -1
+    max_odd = -sys.maxsize
     for i in range(len(num_list)):
         if num_list[i] % 2 == 1:
             if num_list[i] > max_odd:
-                max_odd = i
-        else:
-            return 'No matches'
-    return max_odd
+                max_odd = num_list[i]
+                max_odd_index = i
+        if max_odd_index is False:
+            print('No matches')
+    print(max_odd_index)
 
 
 def get_max_even(num_list):  # Done! Tested!
-    max_even = 0
+    max_even_index = -1
+    max_even = -sys.maxsize
     for i in range(len(num_list)):
         if num_list[i] % 2 == 0:
             if num_list[i] > max_even:
-                max_even = i
-        else:
-            return 'No matches'
-    return max_even
+                max_even = num_list[i]
+                max_even_index = i
+    if max_even_index == -1:
+        print('No matches')
+    else:
+        print(max_even_index)
 
 
 def get_min_odd(num_list):  # Done! Tested!
+    min_odd_index = -1
     min_odd = sys.maxsize
     for i in range(len(num_list)):
         if num_list[i] % 2 == 1:
             if num_list[i] < min_odd:
-                min_odd = i
-        else:
-            return 'No matches'
-    return min_odd
+                min_odd = num_list[i]
+                min_odd_index = i
+        if min_odd_index is False:
+            print('No matches')
+    print(min_odd_index)
 
 
 def get_min_even(num_list):  # Done! Tested!
+    min_even_index = -1
     min_even = sys.maxsize
     for i in range(len(num_list)):
         if num_list[i] % 2 == 0:
             if num_list[i] < min_even:
-                min_odd = i
-        else:
-            return 'No matches'
-    return min_even
+                min_even = num_list[i]
+                min_even_index = i
+    if min_even_index == -1:
+        print('No matches')
+    else:
+        print(min_even_index)
 
 
-def first_even_count(num_list):  # Done! Tested!
+def first_even_count(num_list):
     first_even = []
     count = 0
     if int(command[1]) > len(num_list):
-        return 'Invalid count'
-    for i in range(len(num_list)):
-        if num_list[i] % 2 == 0:
-            first_even.append(num_list[i])
-            count += 1
-            if count == int(command[1]):
-                return first_even
-    return first_even
+        print('Invalid count')
+        return
+    else:
+        for i in range(len(num_list)):
+            if num_list[i] % 2 == 0:
+                first_even.append(num_list[i])
+                count += 1
+                if count == int(command[1]):
+                    break
+        if len(first_even) >= int(command[1]):
+            print(first_even)
+        else:
+            print(first_even)
 
 
-def first_odd_count(num_list):  # Done! Tested!
+def first_odd_count(num_list):
     first_odd = []
     count = 0
     if int(command[1]) > len(num_list):
-        return 'Invalid count'
-    for i in range(len(num_list)):
-        if num_list[i] % 2 == 1:
-            first_odd.append(num_list[i])
-            count += 1
-            if count == int(command[1]):
-                return first_odd
-
-    return first_odd
+        print('Invalid count')
+        return
+    else:
+        for i in range(len(num_list)):
+            if num_list[i] % 2 == 1:
+                first_odd.append(num_list[i])
+                count += 1
+                if count == int(command[1]):
+                    break
+        if len(first_odd) >= int(command[1]):
+            print(first_odd)
+        else:
+            print(first_odd)
 
 
 def last_even_count(num_list):
@@ -93,14 +113,19 @@ def last_even_count(num_list):
     num_list = num_list[:: -1]
     count = 0
     if int(command[1]) > len(num_list):
-        return 'Invalid count'
-    for i in range(len(num_list)):
-        if num_list[i] % 2 == 0:
-            last_even.append(num_list[i])
-            count += 1
-            if count == int(command[1]):
-                return last_even[:: -1]
-    return last_even[:: -1]
+        print('Invalid count')
+        return
+    else:
+        for i in range(len(num_list)):
+            if num_list[i] % 2 == 0:
+                last_even.append(num_list[i])
+                count += 1
+                if count == int(command[1]):
+                    break
+        if len(last_even) >= int(command[1]):
+            print(last_even[:: -1])
+        else:
+            print(last_even[:: -1])
 
 
 def last_odd_count(num_list):
@@ -108,54 +133,51 @@ def last_odd_count(num_list):
     num_list = num_list[:: -1]
     count = 0
     if int(command[1]) > len(num_list):
-        return 'Invalid count'
-    for i in range(len(num_list)):
-        if num_list[i] % 2 == 1:
-            last_odd.append(num_list[i])
-            count += 1
-            if count == int(command[1]):
-                return last_odd[:: -1]
-
-    return last_odd[:: -1]
+        print('Invalid count')
+        return
+    else:
+        for i in range(len(num_list)):
+            if num_list[i] % 2 == 1:
+                last_odd.append(num_list[i])
+                count += 1
+                if count == int(command[1]):
+                    break
+        if len(last_odd) >= int(command[1]):
+            print(last_odd[:: -1])
+        else:
+            print(last_odd[:: -1])
 
 
 while command[0] != 'end':
     if command[0] == "exchange":  # Done!
         index = int(command[1])
-        new_array = exchange(array, index)
+        array = exchange(array, index)
 
     elif command[0] == 'max':  # Done!
         if command[1] == 'odd':
-            odd_max = get_max_odd(array)
+            get_max_odd(array)
         elif command[1] == 'even':
-            even_max = get_max_even(array)
+            get_max_even(array)
 
     elif command[0] == 'min':  # Done!
         if command[1] == 'odd':
-            odd_min = get_min_odd(array)
+            get_min_odd(array)
         elif command[1] == 'even':
-            even_min = get_min_even(array)
+            get_min_even(array)
 
     elif command[0] == 'first':  # Done!
         if command[2] == 'even':
-            count_even = first_even_count(array)
+            first_even_count(array)
         elif command[2] == 'odd':
-            count_odd = first_odd_count(array)
+            first_odd_count(array)
 
     elif command[0] == 'last':
         if command[2] == 'even':
-            last_count_even = last_even_count(array)
+            last_even_count(array)
         elif command[2] == 'odd':
-            last_count_odd = last_odd_count(array)
+            last_odd_count(array)
 
     command = input().split(' ')
 
-print(new_array)
-print(odd_max)
-print(odd_min)
-print(even_max)
-print(even_min)
-print(count_even)
-print(count_odd)
-print(last_count_even)
-print(last_count_odd)
+
+print(array)
