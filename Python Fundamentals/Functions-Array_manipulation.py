@@ -21,12 +21,13 @@ def get_max_odd(num_list):  # Done! Tested!
     max_odd = -sys.maxsize
     for i in range(len(num_list)):
         if num_list[i] % 2 == 1:
-            if num_list[i] > max_odd:
+            if num_list[i] >= max_odd:
                 max_odd = num_list[i]
                 max_odd_index = i
-        if max_odd_index is False:
-            print('No matches')
-    print(max_odd_index)
+    if max_odd_index == -1:
+        print('No matches')
+    else:
+        print(max_odd_index)
 
 
 def get_max_even(num_list):  # Done! Tested!
@@ -34,7 +35,7 @@ def get_max_even(num_list):  # Done! Tested!
     max_even = -sys.maxsize
     for i in range(len(num_list)):
         if num_list[i] % 2 == 0:
-            if num_list[i] > max_even:
+            if num_list[i] >= max_even:
                 max_even = num_list[i]
                 max_even_index = i
     if max_even_index == -1:
@@ -48,12 +49,13 @@ def get_min_odd(num_list):  # Done! Tested!
     min_odd = sys.maxsize
     for i in range(len(num_list)):
         if num_list[i] % 2 == 1:
-            if num_list[i] < min_odd:
+            if num_list[i] <= min_odd:
                 min_odd = num_list[i]
                 min_odd_index = i
-        if min_odd_index is False:
-            print('No matches')
-    print(min_odd_index)
+    if min_odd_index == -1:
+        print('No matches')
+    else:
+        print(min_odd_index)
 
 
 def get_min_even(num_list):  # Done! Tested!
@@ -61,7 +63,7 @@ def get_min_even(num_list):  # Done! Tested!
     min_even = sys.maxsize
     for i in range(len(num_list)):
         if num_list[i] % 2 == 0:
-            if num_list[i] < min_even:
+            if num_list[i] <= min_even:
                 min_even = num_list[i]
                 min_even_index = i
     if min_even_index == -1:
