@@ -1,5 +1,4 @@
 import sys
-
 array = input().split(" ")
 array = list(map(int, array))
 command = input().split(' ')
@@ -75,20 +74,16 @@ def get_min_even(num_list):
 def first_even_count(num_list):
     first_even = []
     count = 0
+    if int(command[1]) == count:
+      print(first_even)
+      return
     if int(command[1]) > len(num_list):
         print('Invalid count')
         return
     else:
-        for i in range(len(num_list)):
-            if num_list[i] % 2 == 0:
-                first_even.append(num_list[i])
-                count += 1
-                if count == int(command[1]):
-                    break
-        if len(first_even) >= int(command[1]):
-            print(first_even)
-        else:
-            print(first_even)
+        first_even = [i for i in num_list if i % 2 == 0]
+        print(first_even[:int(command[1])])
+        return
 
 
 def first_odd_count(num_list):
@@ -108,42 +103,32 @@ def first_odd_count(num_list):
 
 def last_even_count(num_list):
     last_even = []
-    num_list = num_list[:: -1]
     count = 0
+    if int(command[1]) == count:
+      print(last_even)
+      return
     if int(command[1]) > len(num_list):
         print('Invalid count')
         return
     else:
-        for i in range(len(num_list)):
-            if num_list[i] % 2 == 0:
-                last_even.append(num_list[i])
-                count += 1
-                if count == int(command[1]):
-                    break
-        if len(last_even) >= int(command[1]):
-            print(last_even[:: -1])
-        else:
-            print(last_even[:: -1])
+        last_even = [i for i in num_list if i % 2 == 0]
+        print(last_even[-int(command[1]):])
+        return
 
 
 def last_odd_count(num_list):
     last_odd = []
-    num_list = num_list[:: -1]
     count = 0
+    if int(command[1]) == count:
+      print(last_odd)
+      return
     if int(command[1]) > len(num_list):
         print('Invalid count')
         return
     else:
-        for i in range(len(num_list)):
-            if num_list[i] % 2 == 1:
-                last_odd.append(num_list[i])
-                count += 1
-                if count == int(command[1]):
-                    break
-        if len(last_odd) >= int(command[1]):
-            print(last_odd[:: -1])
-        else:
-            print(last_odd[:: -1])
+        last_odd = [i for i in num_list if i % 2 == 1]
+        print(last_odd[-int(command[1]):])
+        return
 
 
 while command[0] != 'end':
@@ -163,11 +148,11 @@ while command[0] != 'end':
       elif command[1] == 'even':
           get_min_even(array)
 
-    elif command[0] == 'first':  # Done!
-      if command[2] == 'even':
-          first_even_count(array)
-      elif command[2] == 'odd':
-          first_odd_count(array)
+  elif command[0] == 'first':
+    if command[2] == 'even':
+        first_even_count(array)
+    elif command[2] == 'odd':
+        first_odd_count(array)
 
   elif command[0] == 'last':
       if command[2] == 'even':
