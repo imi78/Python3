@@ -1,26 +1,24 @@
+def first_odd_count(num_list):
+    first_odd = []
+    count = 0
+    if int(command[1]) == count:
+      print(first_odd)
+      return
+    if int(command[1]) > len(num_list):
+        print('Invalid count')
+        return
+    else:
+        first_odd = [i for i in num_list if i % 2 == 1]
+        count += 1
+        if count == int(command[1]):
+          print(first_odd[:int(command[1])])
+          return
+
+
+
+
 num_list = [1, 3, 5, 7, 9]
-command = 'first 1'.split(' ')
-first_odd = []
-count = 0
-if int(command[1]) == count:
-  print(first_odd)
-if int(command[1]) > len(num_list):
-    print('Invalid count')
-    
-    
-else:
-    for i in range(len(num_list)):
-      if num_list[i] % 2 == 1:
-          first_odd.append(num_list[i])
-          count += 1
-          if count == int(command[1]):
-              print(first_odd)
-              break
+command = 'first 4'.split(' ')
 
+first_odd_count(num_list)
 
-
-
-    # if len(first_odd) >= int(command[1]):
-    #     print(first_odd)
-    # else:
-    #   print(first_odd)

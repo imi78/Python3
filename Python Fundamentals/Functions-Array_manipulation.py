@@ -96,22 +96,14 @@ def first_odd_count(num_list):
     count = 0
     if int(command[1]) == count:
       print(first_odd)
+      return
     if int(command[1]) > len(num_list):
         print('Invalid count')
         return
     else:
-        for i in range(len(num_list)):
-            if num_list[i] % 2 == 1:
-                first_odd.append(num_list[i])
-                count += 1
-                if count == int(command[1]):
-                  print(first_odd)
-                  break
-        
-        # if len(first_odd) >= int(command[1]):
-        #     print(first_odd)
-        # else:
-        #     break
+        first_odd = [i for i in num_list if i % 2 == 1]
+        print(first_odd[:int(command[1])])
+        return
 
 
 def last_even_count(num_list):
