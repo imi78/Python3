@@ -15,7 +15,7 @@ def exchange(num_list, index):
         return num_list
 
 
-def get_max_odd(num_list):  
+def get_max_odd(num_list):
     max_odd_index = -1
     max_odd = -sys.maxsize
     for i in range(len(num_list)):
@@ -75,8 +75,8 @@ def first_even_count(num_list):
     first_even = []
     count = 0
     if int(command[1]) == count:
-      print(first_even)
-      return
+        print(first_even)
+        return
     if int(command[1]) > len(num_list):
         print('Invalid count')
         return
@@ -90,8 +90,8 @@ def first_odd_count(num_list):
     first_odd = []
     count = 0
     if int(command[1]) == count:
-      print(first_odd)
-      return
+        print(first_odd)
+        return
     if int(command[1]) > len(num_list):
         print('Invalid count')
         return
@@ -105,8 +105,8 @@ def last_even_count(num_list):
     last_even = []
     count = 0
     if int(command[1]) == count:
-      print(last_even)
-      return
+        print(last_even)
+        return
     if int(command[1]) > len(num_list):
         print('Invalid count')
         return
@@ -120,8 +120,8 @@ def last_odd_count(num_list):
     last_odd = []
     count = 0
     if int(command[1]) == count:
-      print(last_odd)
-      return
+        print(last_odd)
+        return
     if int(command[1]) > len(num_list):
         print('Invalid count')
         return
@@ -132,35 +132,34 @@ def last_odd_count(num_list):
 
 
 while command[0] != 'end':
-  if command[0] == "exchange":
-    index = int(command[1])
-    array = exchange(array, index)
+    if command[0] == "exchange":
+        index = int(command[1])
+        array = exchange(array, index)
 
-  elif command[0] == 'max':  
-      if command[1] == 'odd':
-          get_max_odd(array)
-      elif command[1] == 'even':
-          get_max_even(array)
+    elif command[0] == 'max':
+        if command[1] == 'odd':
+            get_max_odd(array)
+        elif command[1] == 'even':
+            get_max_even(array)
 
-  elif command[0] == 'min':  
-      if command[1] == 'odd':
-          get_min_odd(array)
-      elif command[1] == 'even':
-          get_min_even(array)
+    elif command[0] == 'min':
+        if command[1] == 'odd':
+            get_min_odd(array)
+        elif command[1] == 'even':
+            get_min_even(array)
 
-  elif command[0] == 'first':
-    if command[2] == 'even':
-        first_even_count(array)
-    elif command[2] == 'odd':
-        first_odd_count(array)
+    elif command[0] == 'first':
+        if command[2] == 'even':
+            first_even_count(array)
+        elif command[2] == 'odd':
+            first_odd_count(array)
 
-  elif command[0] == 'last':
-      if command[2] == 'even':
-          last_even_count(array)
-      elif command[2] == 'odd':
-          last_odd_count(array)
+    elif command[0] == 'last':
+        if command[2] == 'even':
+            last_even_count(array)
+        elif command[2] == 'odd':
+            last_odd_count(array)
 
-  command = input().split(' ')
-
+    command = input().split(' ')
 
 print(array)
