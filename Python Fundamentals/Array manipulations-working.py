@@ -52,7 +52,6 @@ def last(numbers, even, counter):
     last_list_even = []
     count = 0
     for i in range(len(numbers) - 1, -1, -1):
-
         if count == counter:
             break
 

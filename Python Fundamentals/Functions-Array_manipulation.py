@@ -4,7 +4,7 @@ array = list(map(int, array))
 command = input().split(' ')
 
 
-def exchange(num_list, index): 
+def exchange(num_list, index):
     if 0 <= index < len(num_list):
         start = num_list[0:index + 1]
         end = num_list[index + 1:]
@@ -29,7 +29,7 @@ def get_max_odd(num_list):
         print(max_odd_index)
 
 
-def get_max_even(num_list): 
+def get_max_even(num_list):
     max_even_index = -1
     max_even = -sys.maxsize
     for i in range(len(num_list)):
@@ -43,7 +43,7 @@ def get_max_even(num_list):
         print(max_even_index)
 
 
-def get_min_odd(num_list): 
+def get_min_odd(num_list):
     min_odd_index = -1
     min_odd = sys.maxsize
     for i in range(len(num_list)):
