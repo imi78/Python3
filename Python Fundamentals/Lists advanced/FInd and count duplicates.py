@@ -11,6 +11,8 @@ lst = [1, 3, 5, 7, 9, 3, 5, 7, 9, 1, 3, 5, 7, 9, 1, 3, 5, 7, 9]
 # print(d)
 
 #  Same thing with nested loops
+
+
 def duplicates(numbers):
     for i in lst:
         for j in lst:
