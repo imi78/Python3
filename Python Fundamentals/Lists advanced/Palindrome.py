@@ -7,4 +7,4 @@ if searched_word == searched_word[:: -1]:
   print(f'Found palindrome {occ} times')
   
 else:
-  print('Searched word is not palindorme')
+  print('Searched word is not palindrome')

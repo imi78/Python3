@@ -1,32 +1,251 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="528b68b3-2020-4457-9661-99754e6231e2" name="Default Changelist" comment="" />
+    <list default="true" id="7fe46291-db0a-42e4-94c9-9085e970f118" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Python projects.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.replit" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5 &amp; Kivy/Kivy window.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5 &amp; Kivy/PyQt5 first program.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Array manipulations-working.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Cinema tickets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Commisions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Dict comprehension test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Evens&amp;Odds [list comprehension].py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Mutate Strings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Parking.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Party profit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Priorities.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Ski_vacation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Special numbers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Wagons.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/fruit_shop.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/scolarship.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Function_exercise_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-Array_manipulation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-Loading Bar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-Odd_Even_from single_number.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-Password_validator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-Perfect_number.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-factorial_calculation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-multiple_functions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-palindrome_numbers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-print_inside_function.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/05-Lists-Advanced-Exercise.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Decipher.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Even numbers comprehension.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Inventory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Lists with sorted.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Map and Filter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Palindrome.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Shooting targets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Software versions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Article.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Catalogue.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Class grades.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Longitude Latitude.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Storage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Vehicle_db.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Weapon.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Zoo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Character Sequence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Clever Lily.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Commisions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Divide Without Remainder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Even Powers of 2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Half Sum Element.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Histogram.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Hotel Room.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Journey.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Left and Right Sum.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/Building.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/Calculator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/Cinema Tickets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/Clock.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/Combinations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/Sum of Two Numbers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/Travelling.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Number sequence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Numbers Ending in 7.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Numbers N...1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Odd Even Position.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Odd Even Sum.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Odd Even Sum_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/On Time for the Exam.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Operations Between Numbers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Calorie calculator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Computer room.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Gold Mine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Moon.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Puppy Care.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Santa presents.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Substitute.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Substitutes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Salary.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Ski_vacation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Sum Numbers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Volleyball.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/Vowels Sum.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Account Balance.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Cake.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Coins.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Exam Preparation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Graduation pt.2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Moving.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Old Books.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Password.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Sequence 2k+1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Sum Numbers While loop.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Vacation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Walking.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/While loops/max numbers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/While loops/min numbers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/While loops/while loop.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/cinema.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/fishing_boat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/fruit_shop.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/new_home.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/FInd and count duplicates.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python basics/scolarship.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
-  <component name="ProjectId" id="1kQlGE6T58sCQ0145rrZ3oSTehF" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="imi78" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="Python3" />
+  </component>
+  <component name="ProjectId" id="1mnItWoy6BGg96dMFfBvijvlHjB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.py" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="Dict comprehension test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python Fundamentals/Common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python Fundamentals/Common/Dict comprehension test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Program Files (x86)\Python38-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.Dict comprehension test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="528b68b3-2020-4457-9661-99754e6231e2" name="Default Changelist" comment="" />
-      <created>1605640597921</created>
+      <changelist id="7fe46291-db0a-42e4-94c9-9085e970f118" name="Default Changelist" comment="" />
+      <created>1610123163017</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1605640597921</updated>
+      <updated>1610123163017</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/Python3-1" />
+      <path value="$PROJECT_DIR$/../Test-Automation" />
+      <path value="$PROJECT_DIR$/Python3" />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
