@@ -8,9 +8,9 @@ def convert(from_currency, to_currency, amount):
     initial_amount = amount
     rates = data['rates']
     if from_currency != 'EUR':
-        amount = amount / rates[from_currency]
+        amount = amount / rates[from_currency]  # calculates the base currency (EUR) rate.
 
-    amount = round(amount * rates[to_currency], 2)
+    amount = round(amount * rates[to_currency], 2)  # then re-calculates the rate to the given currency
     print(f'{initial_amount} {from_currency} = {amount:.2f} {to_currency}')
 
 
