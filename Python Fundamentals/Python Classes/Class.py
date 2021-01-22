@@ -1,5 +1,5 @@
 class Class:
-    __students_count = 22
+    __students_count = 22  # private, извън __init__ се достъпва чрез името на класа (Class.__students_count)
     def __init__(self, name):
         self.name = name
         self.students = []
@@ -18,7 +18,8 @@ class Class:
         # result = f"Items in the {self.name} catalogue: \n"
         # result += '\n'.join(sorted(self.products))
         # return result  # join по нов ред на сортираните елементи в списъка
-        return f"The students in {self.name}: {', '.join(self.students)}. \n Average grade: {self.get_average_grade():.2f}"
+        return f"The students in {self.name}: {', '.join(self.students)}. \n " \
+               f"Average grade: {self.get_average_grade():.2f}"
 
 
 a_class = Class("11B")
