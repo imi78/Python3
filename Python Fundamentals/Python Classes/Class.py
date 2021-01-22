@@ -1,5 +1,5 @@
 class Class:
-    __students_count = 22  # private, извън __init__ се достъпва чрез името на класа (Class.__students_count)
+    __students_count = 22 # private, извън __init__ се достъпва чрез името на класа (Class.__students_count)
     def __init__(self, name):
         self.name = name
         self.students = []
