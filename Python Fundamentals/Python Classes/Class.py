@@ -15,9 +15,6 @@ class Class:
         return sum(self.grades)/len(self.grades)
 
     def __repr__(self):
-        # result = f"Items in the {self.name} catalogue: \n"
-        # result += '\n'.join(sorted(self.products))
-        # return result  # join по нов ред на сортираните елементи в списъка
         return f"The students in {self.name}: {', '.join(self.students)}. \n " \
                f"Average grade: {self.get_average_grade():.2f}"
 
