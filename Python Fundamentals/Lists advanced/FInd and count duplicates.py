@@ -7,7 +7,7 @@ lst = [1, 3, 5, 7, 9, 3, 5, 7, 9, 1, 3, 5, 7, 9, 1, 3, 5, 7, 9]
 #         d[number] = count
 #     elif number in d:
 #         # x = d.get(number) # get method returns the value of a given key
-#         d[number] = (d.get(number) + 1)  # increase the value of value with one
+#         d[number] = (d.get(number) + 1)  # increase the value of dict value with one
 # print(d)
 
 #  Same thing with nested loops
