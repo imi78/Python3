@@ -19,7 +19,7 @@
 # In the fifth line, print True if  has any uppercase characters. Otherwise, print False.
 #
 
-#  for ANY method you need an iterable, that's why for loop is used...
+#  for ANY method you need an iterable, that's why for loop is used... The method itself returns True or False
 
 if __name__ == '__main__':
     str = input()
