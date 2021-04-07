@@ -9,4 +9,4 @@ def Factorial(n):
 
 
 
-print(Factorial(1))
+print(Factorial(4))
