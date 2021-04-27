@@ -1,0 +1,30 @@
+# from itertools import zip_longest  # combines two lists of different lenght
+
+lst = [['VW234 Delaware', 'FL456 Oregon', 'WN456 Las Vegas'], ['VW234 Cancelled', 'WN456 Cancelled'], ['Cancelled']]
+searched_word = "".join(lst[2])
+flights = {}
+flight_status = {}
+
+for i in lst[0]:
+    flight_number = i.split(' ')[0]
+    destination = i.split()[1:]
+    destination = " ".join(destination)
+    flights[flight_number] = destination
+
+for j in lst[1]:
+    flight_number = j.split()[0]
+    status = j.split()[1]
+    for k in lst[0]:
+        if flight_number in k:
+            print(f'Destination: {flights[flight_number]}, Status: {status}')
+        
+    
+
+
+# dict[1] = 300  # тук променяш стойността 
+# dict['one'] = dict.pop(1)  # тук променяш ключа
+
+# call the keys and values
+
+# print(dict['one'])  # с това викаш стойността на ключа 'one'
+# val = [v for k, v in dict.items() if k == 5] # stores the value of a given key
