@@ -1,4 +1,5 @@
 import requests
+
 # import re
 
 # currency_pattern = "^[a-zA-Z]{3}$"  # matches exactly thre chars
@@ -9,7 +10,7 @@ data = requests.get(url).json()
 rates = data['rates']
 currencies = []
 for key in rates:
-  currencies.append(key)
+    currencies.append(key)
 print(currencies)
 
 # def convert(from_currency, to_currency, amount):
@@ -26,7 +27,6 @@ print(currencies)
 #     if amount.isdigit() == False:
 #       print('Enter a valid amount')
 
- 
 
 # from_currency = input("From currency: ").upper()
 # to_currency = input("To currency: ").upper()
@@ -34,4 +34,3 @@ print(currencies)
 
 
 # convert(from_currency, to_currency, amount)
-

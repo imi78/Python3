@@ -1,0 +1,624 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.8 (Python3) (2)\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 08d58b8f0850f9062d1debea10a94c47202793e8)
++++ b/.idea/misc.xml	(date 1621503012503)
+@@ -1,4 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (Python3) (2)" project-jdk-type="Python SDK" />
++  <component name="PyCharmProfessionalAdvertiser">
++    <option name="shown" value="true" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: Flask project/test.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from flask import Flask\r\napp = Flask(__name__)\r\n\r\n@app.route('/')\r\ndef hello_world():\r\n    return 'Hello World!'\r\n\r\n\r\nif __name__ == '__main__':\r\n    app.run()\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Flask project/test.py b/Flask project/test.py
+--- a/Flask project/test.py	(revision 08d58b8f0850f9062d1debea10a94c47202793e8)
++++ b/Flask project/test.py	(date 1621504789791)
+@@ -1,6 +1,7 @@
+ from flask import Flask
+ app = Flask(__name__)
+ 
++
+ @app.route('/')
+ def hello_world():
+     return 'Hello World!'
+Index: .idea/Python projects.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"PYTHON_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\" />\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/Python projects.iml b/.idea/Python projects.iml
+--- a/.idea/Python projects.iml	(revision 08d58b8f0850f9062d1debea10a94c47202793e8)
++++ b/.idea/Python projects.iml	(date 1611220709998)
+@@ -5,4 +5,7 @@
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
++  <component name="PackageRequirementsSettings">
++    <option name="requirementsPath" value="" />
++  </component>
+ </module>
+\ No newline at end of file
+Index: Currency converter.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import requests\r\n\r\nurl = 'http://data.fixer.io/api/latest?access_key=c1bf0b4af0dd8939a2da6c80e10c5bbf'\r\n\r\ndata = requests.get(url).json()\r\nrates = {}\r\nrates = data['rates']\r\nprint(rates)\r\n\r\ndef convert(from_currency, to_currency, amount):\r\n  initial_amount = int(amount)\r\n  rates = data['rates']\r\n  if from_currency != 'EUR':\r\n    amount = amount / rates[from_currency]  # calculates the base currency (EUR) rate.\r\n\r\n    amount = round(amount * rates[to_currency], 2)  # then re-calculates the rate to the given currency\r\n    print(f'{initial_amount} {from_currency} = {amount:.2f} {to_currency}')\r\n  else:\r\n    amount = amount / rates[from_currency]  # calculates the base currency (EUR) rate.\r\n\r\n    amount = round(amount * rates[to_currency], 2)  # then re-calculates the rate to the given currency\r\n    print(f'{initial_amount} {from_currency} = {amount:.2f} {to_currency}')\r\n\r\nfrom_currency = input(\"From currency: \").upper()\r\nto_currency = input(\"To currency: \").upper()\r\namount = int(input(\"Amount: \"))\r\n\r\nconvert(from_currency, to_currency, amount)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Currency converter.py b/Currency converter.py
+--- a/Currency converter.py	(revision 08d58b8f0850f9062d1debea10a94c47202793e8)
++++ b/Currency converter.py	(date 1621492432323)
+@@ -5,22 +5,23 @@
+ data = requests.get(url).json()
+ rates = {}
+ rates = data['rates']
+-print(rates)
++
+ 
+ def convert(from_currency, to_currency, amount):
+-  initial_amount = int(amount)
+-  rates = data['rates']
+-  if from_currency != 'EUR':
+-    amount = amount / rates[from_currency]  # calculates the base currency (EUR) rate.
++    initial_amount = int(amount)
++    rates = data['rates']
++    if from_currency != 'EUR':
++        amount = amount / rates[from_currency]  # calculates the base currency (EUR) rate.
+ 
+-    amount = round(amount * rates[to_currency], 2)  # then re-calculates the rate to the given currency
+-    print(f'{initial_amount} {from_currency} = {amount:.2f} {to_currency}')
+-  else:
+-    amount = amount / rates[from_currency]  # calculates the base currency (EUR) rate.
++        amount = round(amount * rates[to_currency], 2)  # then re-calculates the rate to the given currency
++        print(f'{initial_amount} {from_currency} = {amount:.2f} {to_currency}')
++    else:
++        amount = amount / rates[from_currency]  # calculates the base currency (EUR) rate.
+ 
+-    amount = round(amount * rates[to_currency], 2)  # then re-calculates the rate to the given currency
+-    print(f'{initial_amount} {from_currency} = {amount:.2f} {to_currency}')
++        amount = round(amount * rates[to_currency], 2)  # then re-calculates the rate to the given currency
++        print(f'{initial_amount} {from_currency} = {amount:.2f} {to_currency}')
+ 
++
+ from_currency = input("From currency: ").upper()
+ to_currency = input("To currency: ").upper()
+ amount = int(input("Amount: "))
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"7fe46291-db0a-42e4-94c9-9085e970f118\" name=\"Default Changelist\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/Python projects.iml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/modules.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/vcs.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.replit\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/PyQt5 &amp; Kivy/Kivy window.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/PyQt5 &amp; Kivy/PyQt5 first program.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Common/Array manipulations-working.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Common/Cinema tickets.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Common/Commisions.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Common/Dict comprehension test.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Common/Evens&amp;Odds [list comprehension].py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Common/Mutate Strings.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Common/Parking.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Common/Party profit.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Common/Priorities.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Common/Ski_vacation.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Common/Special numbers.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Common/Wagons.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Common/fruit_shop.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Common/scolarship.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Functions/Function_exercise_1.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Functions/Functions-Array_manipulation.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Functions/Functions-Loading Bar.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Functions/Functions-Odd_Even_from single_number.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Functions/Functions-Password_validator.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Functions/Functions-Perfect_number.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Functions/Functions-factorial_calculation.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Functions/Functions-multiple_functions.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Functions/Functions-palindrome_numbers.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Functions/Functions-print_inside_function.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Lists advanced/05-Lists-Advanced-Exercise.docx\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Lists advanced/Decipher.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Lists advanced/Even numbers comprehension.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Lists advanced/Inventory.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Lists advanced/Lists with sorted.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Lists advanced/Map and Filter.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Lists advanced/Palindrome.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Lists advanced/Shooting targets.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Lists advanced/Software versions.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Article.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Catalogue.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Class grades.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Longitude Latitude.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Storage.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Vehicle_db.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Weapon.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Zoo.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Character Sequence.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Clever Lily.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Commisions.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Divide Without Remainder.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Even Powers of 2.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Half Sum Element.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Histogram.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Hotel Room.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Journey.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Left and Right Sum.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Nested Loops/Building.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Nested Loops/Calculator.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Nested Loops/Cinema Tickets.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Nested Loops/Clock.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Nested Loops/Combinations.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Nested Loops/Sum of Two Numbers.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Nested Loops/Travelling.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Nested Loops/test.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Number sequence.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Numbers Ending in 7.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Numbers N...1.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Odd Even Position.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Odd Even Sum.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Odd Even Sum_1.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/On Time for the Exam.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Operations Between Numbers.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Python Basics Exam/Calorie calculator.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Python Basics Exam/Computer room.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Python Basics Exam/Gold Mine.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Python Basics Exam/Moon.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Python Basics Exam/Puppy Care.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Python Basics Exam/Santa presents.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Python Basics Exam/Substitute.docx\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Python Basics Exam/Substitutes.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Salary.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Ski_vacation.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Sum Numbers.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Volleyball.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/Vowels Sum.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/While loops/Account Balance.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/While loops/Cake.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/While loops/Coins.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/While loops/Exam Preparation.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/While loops/Graduation pt.2.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/While loops/Moving.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/While loops/Old Books.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/While loops/Password.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/While loops/Sequence 2k+1.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/While loops/Sum Numbers While loop.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/While loops/Vacation.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/While loops/Walking.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/While loops/max numbers.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/While loops/min numbers.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/While loops/while loop.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/cinema.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/fishing_boat.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/fruit_shop.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/new_home.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Python Fundamentals/Lists advanced/FInd and count duplicates.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Python basics/scolarship.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/README.md\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/main.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/poetry.lock\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pyproject.toml\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"ROOT_SYNC\" value=\"DONT_SYNC\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"GithubProjectSettings\">\r\n    <option name=\"CREATE_PULL_REQUEST_DEFAULT_BRANCH\" value=\"master\" />\r\n    <option name=\"CREATE_PULL_REQUEST_DEFAULT_REPO_USER\" value=\"imi78\" />\r\n    <option name=\"CREATE_PULL_REQUEST_DEFAULT_REPO_NAME\" value=\"Python3\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1mnItWoy6BGg96dMFfBvijvlHjB\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/main.py\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"project.propVCSSupport.Mappings\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Python.main\">\r\n    <configuration name=\"Dict comprehension test\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Python projects\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/Python Fundamentals/Common\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/Python Fundamentals/Common/Dict comprehension test.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"main\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Python projects\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"C:\\Program Files (x86)\\Python38-32\\python.exe\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/main.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python.main\" />\r\n        <item itemvalue=\"Python.Dict comprehension test\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"7fe46291-db0a-42e4-94c9-9085e970f118\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1610123163017</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1610123163017</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <ignored-roots>\r\n      <path value=\"$PROJECT_DIR$/Python3-1\" />\r\n      <path value=\"$PROJECT_DIR$/../Test-Automation\" />\r\n      <path value=\"$PROJECT_DIR$/Python3\" />\r\n    </ignored-roots>\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/main.py</url>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 08d58b8f0850f9062d1debea10a94c47202793e8)
++++ b/.idea/workspace.xml	(date 1622480474253)
+@@ -1,121 +1,14 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="7fe46291-db0a-42e4-94c9-9085e970f118" name="Default Changelist" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/Python projects.iml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.replit" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/PyQt5 &amp; Kivy/Kivy window.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/PyQt5 &amp; Kivy/PyQt5 first program.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Array manipulations-working.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Cinema tickets.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Commisions.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Dict comprehension test.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Evens&amp;Odds [list comprehension].py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Mutate Strings.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Parking.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Party profit.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Priorities.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Ski_vacation.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Special numbers.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/Wagons.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/fruit_shop.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Common/scolarship.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Function_exercise_1.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-Array_manipulation.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-Loading Bar.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-Odd_Even_from single_number.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-Password_validator.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-Perfect_number.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-factorial_calculation.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-multiple_functions.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-palindrome_numbers.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Functions/Functions-print_inside_function.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/05-Lists-Advanced-Exercise.docx" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Decipher.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Even numbers comprehension.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Inventory.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Lists with sorted.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Map and Filter.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Palindrome.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Shooting targets.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/Software versions.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Article.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Catalogue.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Class grades.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Longitude Latitude.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Storage.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Vehicle_db.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Weapon.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python Fundamentals/Objects and Classes /Zoo.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Character Sequence.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Clever Lily.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Commisions.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Divide Without Remainder.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Even Powers of 2.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Half Sum Element.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Histogram.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Hotel Room.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Journey.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Left and Right Sum.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/Building.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/Calculator.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/Cinema Tickets.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/Clock.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/Combinations.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/Sum of Two Numbers.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/Travelling.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Nested Loops/test.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Number sequence.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Numbers Ending in 7.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Numbers N...1.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Odd Even Position.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Odd Even Sum.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Odd Even Sum_1.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/On Time for the Exam.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Operations Between Numbers.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Calorie calculator.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Computer room.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Gold Mine.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Moon.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Puppy Care.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Santa presents.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Substitute.docx" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Python Basics Exam/Substitutes.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Salary.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Ski_vacation.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Sum Numbers.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Volleyball.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/Vowels Sum.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Account Balance.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Cake.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Coins.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Exam Preparation.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Graduation pt.2.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Moving.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Old Books.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Password.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Sequence 2k+1.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Sum Numbers While loop.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Vacation.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/While loops/Walking.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/While loops/max numbers.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/While loops/min numbers.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/While loops/while loop.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/cinema.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/fishing_boat.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/fruit_shop.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/new_home.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python Fundamentals/Lists advanced/FInd and count duplicates.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Python basics/scolarship.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" />
++    <list default="true" id="7fe46291-db0a-42e4-94c9-9085e970f118" name="Default Changelist" comment="Cleaned file">
++      <change beforePath="$PROJECT_DIR$/.idea/Python projects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python projects.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Currency converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Currency converter.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Flask project/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Flask project/test.py" afterDir="false" />
+     </list>
++    <list id="86dc2382-2f8d-43a4-a889-8b08025f5769" name="Revert &quot;Android app (test project)&quot;" comment="Revert &quot;Android app (test project)&quot;&#10;&#10;This reverts commit d52c1c95" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -129,6 +22,11 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="e08c89df4bb4003bffb8727b02042f1713edd9f7" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+     <option name="ROOT_SYNC" value="DONT_SYNC" />
+   </component>
+@@ -139,6 +37,9 @@
+       <filtered-out-file-type name="TAG" />
+       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+     </file-type-list>
++  </component>
++  <component name="GithubDefaultAccount">
++    <option name="defaultAccountId" value="3c8d5cef-cf10-4d6d-8c70-833094a88e35" />
+   </component>
+   <component name="GithubProjectSettings">
+     <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
+@@ -155,11 +56,16 @@
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.py" />
+-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/Python Fundamentals/Python Classes" />
++    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+   </component>
+-  <component name="RunManager" selected="Python.main">
+-    <configuration name="Dict comprehension test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++  <component name="RecentsManager">
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\D_drive\Programs\Python3\HackerRank" />
++    </key>
++  </component>
++  <component name="RunManager" selected="Python.test">
++    <configuration name="Capitalize first letter of a string" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="Python projects" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+@@ -167,11 +73,11 @@
+         <env name="PYTHONUNBUFFERED" value="1" />
+       </envs>
+       <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python Fundamentals/Common" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HackerRank" />
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python Fundamentals/Common/Dict comprehension test.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HackerRank/Capitalize first letter of a string.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -180,19 +86,82 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="Counting substrings (vowels and consonants)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="Python projects" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+       <envs>
+         <env name="PYTHONUNBUFFERED" value="1" />
+       </envs>
+-      <option name="SDK_HOME" value="C:\Program Files (x86)\Python38-32\python.exe" />
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HackerRank" />
++      <option name="IS_MODULE_SDK" value="true" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HackerRank/Counting substrings (vowels and consonants).py" />
++      <option name="PARAMETERS" value="" />
++      <option name="SHOW_COMMAND_LINE" value="false" />
++      <option name="EMULATE_TERMINAL" value="false" />
++      <option name="MODULE_MODE" value="false" />
++      <option name="REDIRECT_INPUT" value="false" />
++      <option name="INPUT_FILE" value="" />
++      <method v="2" />
++    </configuration>
++    <configuration name="Currency converter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++      <module name="Python projects" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <envs>
++        <env name="PYTHONUNBUFFERED" value="1" />
++      </envs>
++      <option name="SDK_HOME" value="" />
+       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+-      <option name="IS_MODULE_SDK" value="false" />
++      <option name="IS_MODULE_SDK" value="true" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Currency converter.py" />
++      <option name="PARAMETERS" value="" />
++      <option name="SHOW_COMMAND_LINE" value="false" />
++      <option name="EMULATE_TERMINAL" value="false" />
++      <option name="MODULE_MODE" value="false" />
++      <option name="REDIRECT_INPUT" value="false" />
++      <option name="INPUT_FILE" value="" />
++      <method v="2" />
++    </configuration>
++    <configuration name="Designer doormat with string alignment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++      <module name="Python projects" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <envs>
++        <env name="PYTHONUNBUFFERED" value="1" />
++      </envs>
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HackerRank" />
++      <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HackerRank/Designer doormat with string alignment.py" />
++      <option name="PARAMETERS" value="" />
++      <option name="SHOW_COMMAND_LINE" value="false" />
++      <option name="EMULATE_TERMINAL" value="false" />
++      <option name="MODULE_MODE" value="false" />
++      <option name="REDIRECT_INPUT" value="false" />
++      <option name="INPUT_FILE" value="" />
++      <method v="2" />
++    </configuration>
++    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++      <module name="Python projects" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <envs>
++        <env name="PYTHONUNBUFFERED" value="1" />
++      </envs>
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Flask project" />
++      <option name="IS_MODULE_SDK" value="true" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Flask project/test.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -203,8 +172,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Python.main" />
+-        <item itemvalue="Python.Dict comprehension test" />
++        <item itemvalue="Python.test" />
++        <item itemvalue="Python.Currency converter" />
++        <item itemvalue="Python.Counting substrings (vowels and consonants)" />
++        <item itemvalue="Python.Designer doormat with string alignment" />
++        <item itemvalue="Python.Capitalize first letter of a string" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -217,6 +189,161 @@
+       <option name="presentableId" value="Default" />
+       <updated>1610123163017</updated>
+     </task>
++    <task id="LOCAL-00001" summary="Interview (dev) program">
++      <created>1610895176400</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1610895176400</updated>
++    </task>
++    <task id="LOCAL-00002" summary="Interview (dev) program">
++      <created>1610895250291</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1610895250291</updated>
++    </task>
++    <task id="LOCAL-00003" summary="....">
++      <created>1610895383471</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1610895383471</updated>
++    </task>
++    <task id="LOCAL-00004" summary="Should be used as Android app with Kivy framework.">
++      <created>1611080458938</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1611080458938</updated>
++    </task>
++    <task id="LOCAL-00005" summary="Future Android app">
++      <created>1611081042988</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1611081042988</updated>
++    </task>
++    <task id="LOCAL-00006" summary="Clean file">
++      <created>1611081224595</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1611081224595</updated>
++    </task>
++    <task id="LOCAL-00007" summary="new files added">
++      <created>1611257923589</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1611257923589</updated>
++    </task>
++    <task id="LOCAL-00008" summary="Cleaned file">
++      <created>1611299987030</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1611299987030</updated>
++    </task>
++    <task id="LOCAL-00009" summary="Cleaned file">
++      <created>1611300068392</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1611300068392</updated>
++    </task>
++    <task id="LOCAL-00010" summary="new files added">
++      <created>1611309561828</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1611309561828</updated>
++    </task>
++    <task id="LOCAL-00011" summary="new files">
++      <created>1611346023827</created>
++      <option name="number" value="00011" />
++      <option name="presentableId" value="LOCAL-00011" />
++      <option name="project" value="LOCAL" />
++      <updated>1611346023827</updated>
++    </task>
++    <task id="LOCAL-00012" summary="Hackerrank">
++      <created>1614785318486</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1614785318486</updated>
++    </task>
++    <task id="LOCAL-00013" summary="New folder created">
++      <created>1614884360381</created>
++      <option name="number" value="00013" />
++      <option name="presentableId" value="LOCAL-00013" />
++      <option name="project" value="LOCAL" />
++      <updated>1614884360381</updated>
++    </task>
++    <task id="LOCAL-00014" summary="string validators">
++      <created>1615226189652</created>
++      <option name="number" value="00014" />
++      <option name="presentableId" value="LOCAL-00014" />
++      <option name="project" value="LOCAL" />
++      <updated>1615226189652</updated>
++    </task>
++    <task id="LOCAL-00015" summary="..">
++      <created>1615280957090</created>
++      <option name="number" value="00015" />
++      <option name="presentableId" value="LOCAL-00015" />
++      <option name="project" value="LOCAL" />
++      <updated>1615280957090</updated>
++    </task>
++    <task id="LOCAL-00016" summary="solved">
++      <created>1615489313096</created>
++      <option name="number" value="00016" />
++      <option name="presentableId" value="LOCAL-00016" />
++      <option name="project" value="LOCAL" />
++      <updated>1615489313096</updated>
++    </task>
++    <task id="LOCAL-00017" summary="...">
++      <created>1615538885140</created>
++      <option name="number" value="00017" />
++      <option name="presentableId" value="LOCAL-00017" />
++      <option name="project" value="LOCAL" />
++      <updated>1615538885140</updated>
++    </task>
++    <task id="LOCAL-00018" summary="comments">
++      <created>1615550309186</created>
++      <option name="number" value="00018" />
++      <option name="presentableId" value="LOCAL-00018" />
++      <option name="project" value="LOCAL" />
++      <updated>1615550309186</updated>
++    </task>
++    <task id="LOCAL-00019" summary="capitalize!">
++      <created>1615577422616</created>
++      <option name="number" value="00019" />
++      <option name="presentableId" value="LOCAL-00019" />
++      <option name="project" value="LOCAL" />
++      <updated>1615577422616</updated>
++    </task>
++    <task id="LOCAL-00020" summary="...">
++      <created>1615924740878</created>
++      <option name="number" value="00020" />
++      <option name="presentableId" value="LOCAL-00020" />
++      <option name="project" value="LOCAL" />
++      <updated>1615924740878</updated>
++    </task>
++    <task id="LOCAL-00021" summary="Counting all vowels and consonants and all possible substrings in a string">
++      <created>1616056567328</created>
++      <option name="number" value="00021" />
++      <option name="presentableId" value="LOCAL-00021" />
++      <option name="project" value="LOCAL" />
++      <updated>1616056567328</updated>
++    </task>
++    <task id="LOCAL-00022" summary="Cleaned file">
++      <created>1621503356291</created>
++      <option name="number" value="00022" />
++      <option name="presentableId" value="LOCAL-00022" />
++      <option name="project" value="LOCAL" />
++      <updated>1621503356310</updated>
++    </task>
++    <option name="localTasksCounter" value="23" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -237,13 +364,61 @@
+       <path value="$PROJECT_DIR$/../Test-Automation" />
+       <path value="$PROJECT_DIR$/Python3" />
+     </ignored-roots>
++    <MESSAGE value="Interview (dev) program" />
++    <MESSAGE value="...." />
++    <MESSAGE value="Should be used as Android app with Kivy framework." />
++    <MESSAGE value="Future Android app" />
++    <MESSAGE value="Clean file" />
++    <MESSAGE value="new folder" />
++    <MESSAGE value="new files added" />
++    <MESSAGE value="new files" />
++    <MESSAGE value="Hackerrank" />
++    <MESSAGE value="New folder created" />
++    <MESSAGE value="string validators" />
++    <MESSAGE value=".." />
++    <MESSAGE value="solved" />
++    <MESSAGE value="comments" />
++    <MESSAGE value="capitalize!" />
++    <MESSAGE value="..." />
++    <MESSAGE value="Counting all vowels and consonants and all possible substrings in a string" />
++    <MESSAGE value="Cleaned file" />
++    <option name="LAST_COMMIT_MESSAGE" value="Cleaned file" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+       <breakpoints>
+         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+-          <url>file://$PROJECT_DIR$/main.py</url>
+-          <option name="timeStamp" value="1" />
++          <url>file://$PROJECT_DIR$/Currency converter.py</url>
++          <line>11</line>
++          <option name="timeStamp" value="19" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
++          <url>file://$PROJECT_DIR$/Python Fundamentals/Python Classes/test_Storage.py</url>
++          <line>7</line>
++          <option name="timeStamp" value="28" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
++          <url>file://$PROJECT_DIR$/Python Fundamentals/Python Classes/Catalogue.py</url>
++          <line>6</line>
++          <option name="timeStamp" value="31" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
++          <url>file://$PROJECT_DIR$/Python Fundamentals/Python Classes/Catalogue.py</url>
++          <line>12</line>
++          <option name="timeStamp" value="33" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
++          <url>file://$PROJECT_DIR$/Python Fundamentals/Python Classes/Class.py</url>
++          <line>9</line>
++          <option name="timeStamp" value="35" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
++          <url>file://$PROJECT_DIR$/Python Fundamentals/Python Classes/test_Storage.py</url>
++          <option name="timeStamp" value="41" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
++          <url>file://$PROJECT_DIR$/Python Fundamentals/Python Classes/Vehicle(exam task).py</url>
++          <option name="timeStamp" value="42" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>

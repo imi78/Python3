@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+		<link rel="stylesheet" href="currency_converter_style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+		<div class="login">
+			<h1>Currency Converter</h1>
+			
+			<form action="{{ url_for('login') }}" method="post">
+				<label for="from_currency">
+					<i class="far fa-money-bill-alt"></i>
+				</label>
+				<input type="text" name="from_username" placeholder="From currency" id="from_currency" required>
+				<label for="from_currency">
+					<i class="far fa-money-bill-alt"></i>
+				</label>
+				 <input type="text" id="to_currency" name="to_currency" placeholder="To currency" required>
+				   
+				<input type="submit" value="Convert">
+			</form>
+		</div>
+	</body>
+</html>
