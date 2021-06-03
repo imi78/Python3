@@ -11,4 +11,4 @@ def index():
     return render_template("index.html", rates=rates)
     
 @app.route('/', methods =["GET", "POST"])
-def 
+
