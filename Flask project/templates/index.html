@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Currency Converter</title>
-    <link rel="stylesheet" href="currency_converter.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/currency_converter.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
   </head>
 
@@ -46,6 +46,9 @@
 
       <!-- <label type="text">Total</label> -->
 
+<p>{{from_currency}} </p>
+<p>{{to_currency}}</p>
+<p>{{amount}}</p>
     </div>
   </body>
 
