@@ -3,7 +3,9 @@ body {
   margin: 0;
 }
 
-.convert .alert {
+/* The alert message box */
+
+.alert {
   padding: 20px;
   background-color: #ff9800;
   /* Yellow */
@@ -13,6 +15,7 @@ body {
 }
 
 /* The close button */
+
 .closebtn {
   margin-left: 15px;
   color: white;
@@ -35,9 +38,6 @@ body {
   box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
   margin: 100px auto;
 }
-
-/* The alert message box */
-
 
 .convert p {
   text-align: center;
