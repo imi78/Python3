@@ -1,0 +1,28 @@
+<Grid>:
+
+  fromCurr: from_currency  # refers to the id
+  toCurr: to_currency
+
+  GridLayout:
+    cols:1
+    size: root.width -20, root.height -20
+    pos: 10, 10
+
+    GridLayout:
+      cols:2
+    
+      Label:
+        text: "From currency: "
+      TextInput:
+        id: from_currency
+        multiline:False
+
+      Label:
+        text: "To currency: "
+      TextInput:
+        id: to_currency
+        multiline:False
+
+    Button:
+      text: "Submit"
+      on_press: root.btn()

@@ -1,0 +1,30 @@
+<Grid>
+
+  name: name  # refers to the id
+  e_mail: email
+
+  GridLayout:
+    cols:1
+    size: root.width -20, root.height -20
+    pos: 10, 10
+
+    GridLayout:
+      cols:2
+    
+      Label:
+        text: "Name: "
+
+      TextInput:
+        id: name
+        multiline:False
+
+      Label:
+        text: "Email: "
+
+      TextInput:
+        id: email
+        multiline:False
+
+    Button:
+      text: "Submit"
+      on_press: root.btn()

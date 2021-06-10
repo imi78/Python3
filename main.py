@@ -1,36 +1,28 @@
-import requests
-
-# import re
-
-# currency_pattern = "^[a-zA-Z]{3}$"  # matches exactly thre chars
-
-url = 'http://data.fixer.io/api/latest?access_key=c1bf0b4af0dd8939a2da6c80e10c5bbf'
-data = requests.get(url).json()
-# rates = {}
-rates = data['rates']
-currencies = []
-for key in rates:
-    currencies.append(key)
-print(currencies)
-
-# def convert(from_currency, to_currency, amount):
-
-#   if from_currency in rates and to_currency in rates and amount.isdigit():
-#     print(from_currency)
-#     initial_amount = int(amount)
-#     amount = amount / rates[from_currency]  # calculates the base currency (EUR) rates
-#     amount = round(amount * rates[to_currency], 2)  # then re-calculates the rate to the given currency
-#     print(f'{initial_amount} {from_currency} = {amount:.2f} {to_currency}')
-#   else:
-#     if from_currency not in rates or to_currency not in rates:
-#       print('Enter a valid three letter currency')
-#     if amount.isdigit() == False:
-#       print('Enter a valid amount')
+import kivy
+from kivy.app import App
+from kivy.uix.label import Label
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.textinput import TextInput
+from kivy.uix.button import Button
+from kivy.uix.widget import Widget
+from kivy.properties import ObjectProperty
+from kivy.uix.floatlayout import FloatLayout
 
 
-# from_currency = input("From currency: ").upper()
-# to_currency = input("To currency: ").upper()
-# amount = input("Amount: ")
+class Grid(Widget):  # this is accessible by "root." not by "Grid."
+    fromCurr = ObjectProperty(None)
+    toCurr = ObjectProperty(None)
+
+    def btn(self):
+        print(self.fromCurr.text, self.toCurr.text)
+        self.fromCurr.text = ""  # cleares the text input after submit button is clicked
+        self.toCurr.text = ""
 
 
-# convert(from_currency, to_currency, amount)
+class Convert(App):
+    def build(self):
+        return Grid()
+
+
+if __name__ == "__main__":
+    Convert().run()
