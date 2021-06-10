@@ -1,4 +1,6 @@
-<Grid>:
+#: import utils kivy.utils
+
+<Grid>
 
   fromCurr: from_currency  # refers to the id
   toCurr: to_currency
@@ -16,13 +18,22 @@
       TextInput:
         id: from_currency
         multiline:False
+        size_hint: (10, 10)
+        background_normal: ""
+        background_color: utils.get_color_from_hex('#eefa00')
 
       Label:
         text: "To currency: "
+        size_hint: (10, 10)
       TextInput:
         id: to_currency
         multiline:False
+        size_hint: (10, 10)
 
     Button:
+      orientation: "horizontal"
+      size_hint: (0.3, 0.3)
       text: "Submit"
+      background_normal: ""
+      background_color: utils.get_color_from_hex('#fa00df')
       on_press: root.btn()

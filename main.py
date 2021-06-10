@@ -14,7 +14,8 @@ class Grid(Widget):  # this is accessible by "root." not by "Grid."
     toCurr = ObjectProperty(None)
 
     def btn(self):
-        print(self.fromCurr.text, self.toCurr.text)
+        print(f"{self.fromCurr.text} - {self.toCurr.text}")
+        
         self.fromCurr.text = ""  # cleares the text input after submit button is clicked
         self.toCurr.text = ""
 
