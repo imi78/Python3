@@ -9,6 +9,9 @@ data = requests.get(url).json()
 # rates = {}
 rates = data['rates']
 print(rates)
+for k, v in data.items():
+  rates.append(f"{v['id']} -  {v['currencyName']}")
+rates.sort()
 
 # def convert(from_currency, to_currency, amount):
 #     if from_currency in rates and to_currency in rates and amount.isdigit():
