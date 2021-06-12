@@ -5,50 +5,55 @@
     Rectangle:
       pos: self.pos
       size: self.size
-      source: "image.jpg"
-
+      source: "images/image.jpg"  # put path if image is located elsewhere
 
   fromCurr: from_currency  # refers to the id
   toCurr: to_currency 
   amount: amount
     
-  GridLayout:  # the whole frame
+  GridLayout:  # 
     cols:1
     size: root.width, root.height
     pos: 10, 10
     spacing: 20
     padding: 50
       
-    
     GridLayout: # Currency converter title
       cols:1
       
       Label:
         text: "Currency converter"
+        color: 1, 1, 0, 1
         size_hint: (0.1, 0.3)
         pos_hint: {'center_x': 0.5}
 
     GridLayout:  # 1st drop down menu
       cols:2
-      Label:
-        text: "From currency"
+      Image:
+        source: 'images/currency.jpg'
+        allow_stretch: True
+        kep_ration: True
         size_hint: (0.2, 0.3)
         pos_hint: {'center_x': 0.5}
-        # size: self.texture_size
-
+        size: self.texture_size
+      
       Spinner:
         id: from_currency
         text: "From currency"
         size_hint: (0.9, 0.3)
         pos_hint: {'center_x': 0.5}
-
+        values: ["1", "2", "3"]
+        
 
     GridLayout:  # 2nd drop down menu
       cols:2
-      Label:
-        text: "To currency"
+      Image:
+        source: 'images/currency.jpg'
+        allow_stretch: True
+        kep_ration: True
         size_hint: (0.2, 0.3)
         pos_hint: {'center_x': 0.5}
+        size: self.texture_size
 
       Spinner:
         id: to_currency
@@ -59,10 +64,13 @@
     GridLayout:  # amount placeholder
       cols:2
 
-      Label:
-        text: "Amount"
+      Image:
+        source: 'images/amount.jpg'  # needs to be cleared
+        allow_stretch: True
+        kep_ration: True
         size_hint: (0.2, 0.3)
         pos_hint: {'center_x': 0.5}
+        size: self.texture_size
 
       TextInput:
         id: amount
