@@ -1,30 +1,80 @@
-<Grid>
+#: import utils kivy.utils  
 
-  name: name  # refers to the id
-  e_mail: email
+<Grid> 
+  canvas.before:
+    Rectangle:
+      pos: self.pos
+      size: self.size
+      source: "image.jpg"
 
-  GridLayout:
-    cols:1
-    size: root.width -20, root.height -20
-    pos: 10, 10
 
-    GridLayout:
-      cols:2
+  fromCurr: from_currency  # refers to the id
+  toCurr: to_currency 
+  amount: amount
     
+  GridLayout:  # the whole frame
+    cols:1
+    size: root.width, root.height
+    pos: 10, 10
+    spacing: 20
+    padding: 50
+      
+    
+    GridLayout: # Currency converter title
+      cols:1
+      
       Label:
-        text: "Name: "
+        text: "Currency converter"
+        size_hint: (0.1, 0.3)
+        pos_hint: {'center_x': 0.5}
+
+    GridLayout:  # 1st drop down menu
+      cols:2
+      Label:
+        text: "From currency"
+        size_hint: (0.2, 0.3)
+        pos_hint: {'center_x': 0.5}
+        # size: self.texture_size
+
+      Spinner:
+        id: from_currency
+        text: "From currency"
+        size_hint: (0.9, 0.3)
+        pos_hint: {'center_x': 0.5}
+
+
+    GridLayout:  # 2nd drop down menu
+      cols:2
+      Label:
+        text: "To currency"
+        size_hint: (0.2, 0.3)
+        pos_hint: {'center_x': 0.5}
+
+      Spinner:
+        id: to_currency
+        text: "To currency"
+        size_hint: (0.9, 0.3)
+        pos_hint: {'center_x': 0.5}
+
+    GridLayout:  # amount placeholder
+      cols:2
+
+      Label:
+        text: "Amount"
+        size_hint: (0.2, 0.3)
+        pos_hint: {'center_x': 0.5}
 
       TextInput:
-        id: name
-        multiline:False
+        id: amount
+        multiline: False
 
-      Label:
-        text: "Email: "
+    GridLayout:  # placeholder for the conversion result
+      cols:3
 
-      TextInput:
-        id: email
-        multiline:False
-
-    Button:
-      text: "Submit"
-      on_press: root.btn()
+    GridLayout:  # convert button
+      cols:3
+      Button:
+        text: "Convert"
+        size_hint: (0.9, 0.3)
+        pos_hint: {'center_x': 0.5}
+        on_press: root.btn()

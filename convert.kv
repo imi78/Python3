@@ -1,16 +1,24 @@
 #: import utils kivy.utils  
 
 <Grid> 
+  canvas.before:
+    Rectangle:
+      pos: self.pos
+      size: self.size
+      source: "image.jpg"
+
+
   fromCurr: from_currency  # refers to the id
   toCurr: to_currency 
   amount: amount
-
+    
   GridLayout:  # the whole frame
     cols:1
-    size: root.width -20, root.height -20
+    size: root.width, root.height
     pos: 10, 10
     spacing: 20
     padding: 50
+      
     
     GridLayout: # Currency converter title
       cols:1
