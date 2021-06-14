@@ -14,20 +14,24 @@ from kivy.properties import StringProperty
 
 currencies = f"https://free.currconv.com/api/v7/currencies?apiKey=fe444f880c2cb85b3f6a"
 data = requests.get(currencies).json()['results']
-currency = []
+currency = {}
+lst_of_currencies = []
+
+# dict will be used for math aand list for the kivy labels
 
 for k, v in data.items():
-    currency.append(f"{v['id']} -  {v['currencyName']}")
-currency.sort()
-
-
+    currency[k] = v['currencyName']
+    lst_of_currencies.append(f"{k} - {v['currencyName']}")
+lst_of_currencies.sort()
+    
 class Grid(Widget):  # this is accessible by "root." not by "Grid."
     fromCurr = ObjectProperty(None)
     toCurr = ObjectProperty(None)
     amount = ObjectProperty(None)
-    result = StringProperty('')  # sets the result variable
-    currency = currency  # put list here so it can be accessible by root.
-
+    result = StringProperty('')  # sets the result variable, so to be visible in Label field
+    currency = currency  # put list here so it can be accessible by root. in kv file
+    lst_of_currencies = lst_of_currencies
+    
     def btn(self):  # function for conversion
         fromCurr = self.fromCurr.text[0:3]  # takes first three letters from the curency
         toCurr = self.toCurr.text[0:3]
@@ -44,8 +48,10 @@ class Grid(Widget):  # this is accessible by "root." not by "Grid."
         else:
             if fromCurr not in currency or toCurr not in currency:
                 self.result = 'Enter a valid three letter currency'
+               
             if amount.isdigit() == False:
                 self.result = 'Enter a valid amount'
+              
 
             self.fromCurr.text = "From currency"  # cleares the text input after submit button is clicked
             self.toCurr.text = "To currency"

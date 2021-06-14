@@ -18,7 +18,7 @@ def index():
         from_currency = request.form["from_currency"]
         to_currency = request.form["to_currency"]
         amount = request.form["amount"]
-        if from_currency != "From currency" and to_currency != "To currency" and amount!= "":
+        if from_currency != "From currency" and to_currency != "To currency" and amount != "":
             amount = float(amount)
             initial_amount = amount
             url = f'https://free.currconv.com/api/v7/convert?q={from_currency}_{to_currency}&compact=ultra&apiKey=fe444f880c2cb85b3f6a'

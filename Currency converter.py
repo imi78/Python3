@@ -4,14 +4,16 @@ import requests
 
 # currency_pattern = "^[a-zA-Z]{3}$"  # matches exactly thre chars
 
-url = 'http://data.fixer.io/api/latest?access_key=c1bf0b4af0dd8939a2da6c80e10c5bbf'
-data = requests.get(url).json()
-# rates = {}
-rates = data['rates']
-print(rates)
+url = 'https://free.currconv.com/api/v7/currencies?apiKey=fe444f880c2cb85b3f6a'
+data = requests.get(url).json()['results']
+currency = {}
+lst = []
 for k, v in data.items():
-  rates.append(f"{v['id']} -  {v['currencyName']}")
-rates.sort()
+  currency[k] = v['currencyName']
+  lst.append(f"{k} - {v['currencyName']}")
+             
+# currency = sorted(currency)  # sorted dict by keys
+print(lst)
 
 # def convert(from_currency, to_currency, amount):
 #     if from_currency in rates and to_currency in rates and amount.isdigit():
