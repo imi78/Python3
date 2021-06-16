@@ -37,8 +37,8 @@ class Grid(Widget):  # this is accessible by "root." not by "Grid."
         toCurr = self.toCurr.text[0:3]
         amount = self.amount.text  # self.amout.text is a <str>
 
-        if fromCurr in currency and toCurr in currency and amount.isdigit():
-            initial_amount = int(amount)
+        if fromCurr in currency and toCurr in currency and amount.replace(".", "", 1).isdigit():  # check the amount to be int or float
+            initial_amount = float(amount)
             amount = float(amount)
             url = f'https://free.currconv.com/api/v7/convert?q={fromCurr}_{toCurr}&compact=ultra&apiKey=fe444f880c2cb85b3f6a'
             rate = requests.get(url).json()[f"{fromCurr}_{toCurr}"]
@@ -49,7 +49,7 @@ class Grid(Widget):  # this is accessible by "root." not by "Grid."
             if fromCurr not in currency or toCurr not in currency:
                 self.result = 'Enter a valid three letter currency'
                
-            if amount.isdigit() == False:
+            if amount.replace(".", "", 1).isdigit() == False:
                 self.result = 'Enter a valid amount'
               
 

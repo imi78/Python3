@@ -10,6 +10,7 @@ kivy = "^2.0.0"
 pyqt5 = "^5.15.2"
 ajax = "^3.0.0"
 flask = "^2.0.1"
+kivymd = "^0.104.2"
 
 [tool.poetry.dev-dependencies]
 
