@@ -236,6 +236,41 @@ docs = ["sphinx", "sphinx-autoapi (1.4.0)", "sphinx-rtd-theme", "sphinx-notfound
 
 [[package]]
 category = "main"
+description = "Script for installing additional components for the KivyMD library"
+name = "kivymd-components"
+optional = false
+python-versions = "*"
+version = "0.1.6"
+
+[package.dependencies]
+requests = "*"
+
+[[package]]
+category = "main"
+description = "Additional packages for KivyMD library"
+name = "kivymd-extensions"
+optional = false
+python-versions = "*"
+version = "1.0.0"
+
+[[package]]
+category = "main"
+description = "A set of fancy widgets for KivyMD"
+name = "kivymd-extensions.akivymd"
+optional = false
+python-versions = ">=3.6"
+version = "1.2.6"
+
+[package.dependencies]
+kivy = ">=1.11.1"
+kivymd = ">=0.104.1"
+
+[package.extras]
+dev = ["pre-commit", "black", "isort", "flake8", "pytest", "pytest-cov", "pytest-asyncio", "pytest-timeout", "coveralls"]
+docs = ["sphinx", "sphinx-autoapi (1.4.0)", "sphinx-rtd-theme"]
+
+[[package]]
+category = "main"
 description = "Safely add untrusted strings to HTML/XML markup."
 name = "markupsafe"
 optional = false
@@ -366,7 +401,7 @@ version = "2.0.1"
 watchdog = ["watchdog"]
 
 [metadata]
-content-hash = "fe47c890d940324c44935068394ef47adebff84ab0342871f234748e6c0c30d1"
+content-hash = "b5fcb27f5b021b3533c6f424d3483d31a3fd0e7d0109fb93d7bc705b3a42a007"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -481,6 +516,17 @@ kivy-garden = [
 kivymd = [
     {file = "kivymd-0.104.2-py3-none-any.whl", hash = "sha256:c1fbbdaa31b62fa925abac1cadadfdf178a15f1adc3f2e2452e1496a91eab8e1"},
     {file = "kivymd-0.104.2.tar.gz", hash = "sha256:97bc1f9442d25ff9dbd617d5ca74d53e757b92c68636a388e22d3f05a4f19c12"},
+]
+kivymd-components = [
+    {file = "KivyMD-Components-0.1.6.tar.gz", hash = "sha256:db24e01cc9a7f08c84167295aa7e0acbd849c08a51bffd284a79b48bf94ed1cd"},
+]
+kivymd-extensions = [
+    {file = "kivymd_extensions-1.0.0-py3-none-any.whl", hash = "sha256:5f38eae1dd5868d1b3f604b54137abcfe232127de46191940d2638b54a90e974"},
+    {file = "kivymd_extensions-1.0.0.tar.gz", hash = "sha256:2e7ef9b627cd43e9567169a4c4a0ccc56c9500a4f92dbff54eed6a10111c493b"},
+]
+"kivymd-extensions.akivymd" = [
+    {file = "kivymd_extensions.akivymd-1.2.6-py3-none-any.whl", hash = "sha256:a1a5377f5d1b7f4ec978eefc8a7d72b1fbf94ea9ac804108276d098c912f4074"},
+    {file = "kivymd_extensions.akivymd-1.2.6.tar.gz", hash = "sha256:71e44338508110a7e3282bfb96327734ab7efe77a8784599134c32b05619c589"},
 ]
 markupsafe = [
     {file = "MarkupSafe-2.0.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:f9081981fe268bd86831e5c75f7de206ef275defcb82bc70740ae6dc507aee51"},
