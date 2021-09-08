@@ -7,7 +7,7 @@ app.secret_key = 'SECRET_KEY'
 currencies = f"https://free.currconv.com/api/v7/currencies?apiKey=fe444f880c2cb85b3f6a"
 data = requests.get(currencies).json()['results']
 rates = []
-for k, v in data.items():
+for v in data.values():
   rates.append(f"{v['id']} -  {v['currencyName']}")
 rates.sort()
 
