@@ -1,3 +1,5 @@
 <!-- This is a Python project for currency converter.
 Back-end is Python and Flask.
-Front-end is HTML, CSS and Bootstrap... -->
+Front-end is HTML, CSS and Bootstrap.
+CSS is taken from internet with minor modifications made by me using Bootstrap.
+-->
