@@ -1,0 +1,64 @@
+Screen:
+
+  MDCard: 
+    size_hint: None, None
+    size: 300, 400
+    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+    elevation: 10
+    padding: 25
+    spacing: 25
+    orientation: "vertical"
+
+    MDLabel:
+      id: currency_converter_label
+      text: "Currency converter"
+      font_size: 26
+      halign: 'justify'
+      size_hint: (1, 0.1)
+      height: self.texture_size[1]
+      padding_y: 10
+
+# Username field
+
+    MDTextFieldRound:
+      id: user
+      hint_text: 'Username'
+      icon_left: 'account'
+      size_hint_x: 0.8
+      width: 200
+      font_size: 12
+      pos_hint: {'center_x': 0.5}
+    
+# Password field
+
+    MDTextFieldRound:
+      id: password
+      hint_text: 'Password'
+      icon_left: 'eye-off'
+      size_hint_x: 0.8
+      width: 200
+      font_size: 12
+      pos_hint: {'center_x': 0.5}
+      password: True
+
+# Placeholder for result
+
+    MDTextFieldRound:
+      id: result
+      hint_text: 'Result'
+      size_hint_x: 0.8
+      width: 200
+      font_size: 12
+      pos_hint: {'center_x': 0.5}
+
+
+# Button
+
+    MDFillRoundFlatButton:
+      markup: True
+      text: "[b]LOG IN[/b]"
+      font_size: 12
+      pos_hint: {'center_x': 0.5}
+      md_bg_color: 0.07, 0.41, 1, 1
+      on_press: app.btn()
+  
