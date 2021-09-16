@@ -1,12 +1,12 @@
 ############ My own conclusion ########################
 
 def is_anagram(wrd1, wrd2):
-    wrd3 = []  # emty list
+    wrd3 = []  # empty list
 
     for char in wrd2:       # makes a list from a string
         wrd3.append(char)
             
-    for letter in wrd1:      # if the leter exists in the list it is being removed
+    for letter in wrd1:      # if the letter from the first word exists in the list, it is being removed
         if letter in wrd3:
             wrd3.remove(letter)
    
@@ -18,7 +18,7 @@ def is_anagram(wrd1, wrd2):
     
 print(is_anagram("test", "tast"))
 
-########### Using sorted() funtion ############################
+########### Internet solution - using sorted() function ############################
 
 def is_anagram(wrd1, wrd2):
     if sorted(wrd1) == sorted(wrd2):
