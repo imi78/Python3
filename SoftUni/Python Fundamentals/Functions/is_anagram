@@ -1,0 +1,27 @@
+############ My own conclusion ########################
+
+def is_anagram(wrd1, wrd2):
+    wrd3 = []  # emty list
+
+    for char in wrd2:       # makes a list from a string
+        wrd3.append(char)
+            
+    for letter in wrd1:      # if the leter exists in the list it is being removed
+        if letter in wrd3:
+            wrd3.remove(letter)
+   
+    if len(wrd3) == 0:   # checks if the list is empty. If it is, means that first word is consisting of same characters as the second one. 
+        return True
+    else:
+        return False
+            
+    
+print(is_anagram("test", "tast"))
+
+########### Using sorted() funtion ############################
+
+def is_anagram(wrd1, wrd2):
+    if sorted(wrd1) == sorted(wrd2):
+        return True
+    else:
+        return False
