@@ -1,16 +1,8 @@
 import requests
-# import kivy
 from kivy.app import App
-# from kivy.uix.label import Label
-# from kivy.uix.gridlayout import GridLayout
-# from kivy.uix.textinput import TextInput
-# from kivy.uix.button import Button
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 from kivy.properties import StringProperty
-# from kivy.uix.floatlayout import FloatLayout
-# from kivy.uix.dropdown import DropDown
-# from kivy.base import runTouchApp
 
 currencies = f"https://free.currconv.com/api/v7/currencies?apiKey=fe444f880c2cb85b3f6a"
 data = requests.get(currencies).json()['results']
@@ -23,7 +15,8 @@ for k, v in data.items():
     currency[k] = v['currencyName']
     lst_of_currencies.append(f"{k} - {v['currencyName']}")
 lst_of_currencies.sort()
-    
+
+
 class Grid(Widget):  # this is accessible by "root." not by "Grid."
     fromCurr = ObjectProperty(None)
     toCurr = ObjectProperty(None)
@@ -31,13 +24,15 @@ class Grid(Widget):  # this is accessible by "root." not by "Grid."
     result = StringProperty('')  # sets the result variable, so to be visible in Label field
     currency = currency  # put list here so it can be accessible by root. in kv file
     lst_of_currencies = lst_of_currencies
-    
-    def btn(self):  # function for conversion
-        fromCurr = self.fromCurr.text[0:3]  # takes first three letters from the curency
-        toCurr = self.toCurr.text[0:3]
-        amount = self.amount.text  # self.amout.text is a <str>
 
-        if fromCurr in currency and toCurr in currency and amount.replace(".", "", 1).isdigit():  # check the amount to be int or float
+    # function for conversion
+    def btn(self):
+        fromCurr = self.fromCurr.text[0:3]  # takes first three letters from the currency
+        toCurr = self.toCurr.text[0:3]
+        amount = self.amount.text  # self.amount.text is a <str>
+
+        # checks the amount to be int or float
+        if fromCurr in currency and toCurr in currency and amount.replace(".", "", 1).isdigit():
             initial_amount = float(amount)
             amount = float(amount)
             url = f'https://free.currconv.com/api/v7/convert?q={fromCurr}_{toCurr}&compact=ultra&apiKey=fe444f880c2cb85b3f6a'
@@ -48,12 +43,12 @@ class Grid(Widget):  # this is accessible by "root." not by "Grid."
         else:
             if fromCurr not in currency or toCurr not in currency:
                 self.result = 'Enter a valid three letter currency'
-               
-            if amount.replace(".", "", 1).isdigit() == False:
-                self.result = 'Enter a valid amount'
-              
 
-        self.fromCurr.text = "From currency"  # cleares the text input after submit button is clicked
+            if not amount.replace(".", "", 1).isdigit():
+                self.result = 'Enter a valid amount'
+
+        # clears the text input after submit button is clicked
+        self.fromCurr.text = "From currency"
         self.toCurr.text = "To currency"
         self.amount.text = ""
 

@@ -13,36 +13,42 @@ Screen:
       id: currency_converter_label
       text: "Currency converter"
       font_size: 26
-      halign: 'justify'
+      halign: 'center'
       size_hint: (1, 0.1)
       height: self.texture_size[1]
       padding_y: 10
 
-# Username field
-
+    # Text field with drop down
     MDTextFieldRound:
-      id: user
-      hint_text: 'Username'
-      icon_left: 'account'
+      id: from_currency
+      hint_text: 'From currency'
+      icon_left: "bank-transfer"
+      icon_right: "arrow-down-drop-circle-outline"
       size_hint_x: 0.8
       width: 200
       font_size: 12
       pos_hint: {'center_x': 0.5}
-    
-# Password field
+      md_bg_color: app.theme_cls.primary_dark
+      normal_color: app.theme_cls.primary_dark
+      color_active: 0.3, 0.5, 0.8, 0.5
+      on_focus: if self.focus: app.menu_from_currency.open() # calls function to open the specific menu
 
+    # Text field with drop down
     MDTextFieldRound:
-      id: password
-      hint_text: 'Password'
-      icon_left: 'eye-off'
+      id: to_currency
+      hint_text: "To currency"
+      icon_left: "bank-transfer"
+      icon_right: "arrow-down-drop-circle-outline"
       size_hint_x: 0.8
       width: 200
       font_size: 12
       pos_hint: {'center_x': 0.5}
-      password: True
+      md_bg_color: app.theme_cls.primary_dark
+      normal_color: app.theme_cls.primary_dark
+      color_active: 0.3, 0.5, 0.8, 0.5
+      on_focus: if self.focus: app.menu_to_currency.open()  # calls function to open the specific menu
 
-# Placeholder for result
-
+    # Placeholder for result
     MDTextFieldRound:
       id: result
       hint_text: 'Result'
@@ -50,15 +56,16 @@ Screen:
       width: 200
       font_size: 12
       pos_hint: {'center_x': 0.5}
+      md_bg_color: app.theme_cls.primary_dark
+      normal_color: app.theme_cls.primary_dark
+      color_active: 0.3, 0.5, 0.8, 0.5
 
-
-# Button
-
+    # Button
     MDFillRoundFlatButton:
+      id: button
       markup: True
-      text: "[b]LOG IN[/b]"
+      text: "[b]CONVERT[/b]"
       font_size: 12
       pos_hint: {'center_x': 0.5}
       md_bg_color: 0.07, 0.41, 1, 1
       on_press: app.btn()
-  
