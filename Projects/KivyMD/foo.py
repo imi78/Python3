@@ -24,7 +24,7 @@ class Test(MDApp):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         # self.rates = rates
-        self.screen = Builder.load_file("Projects/KivyMD/test.kv")
+        self.screen = Builder.load_file("test.kv")
 
         # Sets the items in the from_currency menu
         menu_items = [
