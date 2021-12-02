@@ -12,14 +12,13 @@ currencies = f"https://free.currconv.com/api/v7/currencies?apiKey=fe444f880c2cb8
 data = requests.get(currencies).json()['results']
 rates = []
 currency = {}
-
 for k, v in data.items():
     currency[k] = v['currencyName']
     rates.append(f"{k} - {v['currencyName']}")
 rates.sort()
 
 class OneLineListItem(OneLineIconListItem):
-    text = StringProperty()
+  text = StringProperty()
 
 
 class Test(MDApp):
