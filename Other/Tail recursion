@@ -19,7 +19,7 @@ grade_D = make_student_classifier(0, 50)
 
 print(grade_A(students))
 print(grade_B(students))
-print(grade_=C(students))
+print(grade_C(students))
 print(grade_D(students))
 
 
