@@ -1,5 +1,5 @@
 import pymongo
-client = pymongo.MongoClient("mongodb+srv://imi78:1qazxsw2!QAZXSW%40@cluster0.1mwqk.mongodb.net/mydb?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://imi78:<password>@cluster0.1mwqk.mongodb.net/mydb?retryWrites=true&w=majority")
 
 # Get the available databases
 db = client.list_database_names()
