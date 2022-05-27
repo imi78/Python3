@@ -24,12 +24,14 @@ def is_real_word(guess, lst):
 def check_guess(guess, word):
     word = list(word)
     result = ["_"] * len(word)
-
+    
+ # check for exact matches chars
     for i, l in enumerate(guess):
         if l == word[i]:
             result[i] = "X"
             word[i] = " "
         
+     # check for chars are at wrong position    
     for i, l in enumerate(guess):
         if l in word:
             if result[i] != "X":
