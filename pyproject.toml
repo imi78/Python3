@@ -14,6 +14,8 @@ kivymd = "^0.104.2"
 kivymd-extensions = "^1.0.0"
 KivyMD-Components = "^0.1.6"
 "kivymd-extensions.akivymd" = "^1.2.6"
+exercise = "^0.1.1"
+pymongo = "^4.1.1"
 
 [tool.poetry.dev-dependencies]
 
