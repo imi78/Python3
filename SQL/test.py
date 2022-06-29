@@ -8,9 +8,12 @@ curr = conn.cursor()
 
 #List with SQL queries to be executed. Just add input to the list
 commands = [
-'SELECT * FROM Player',
-'SELECT id, player_name as name, birthday, height, weight FROM Player WHERE height>150',
-'SELECT name FROM Country'
+"SELECT * FROM Player",
+"SELECT id, player_name as name, birthday, height, weight FROM Player WHERE height>150",
+"INSERT INTO Country(id, Name) VALUES (2, 'Bulgaria')",
+"SELECT name,id FROM Country ORDER BY id",
+"SELECT ROUND(AVG (height), 3) AS 'Rounded' FROM Player",
+"SELECT ROUND(AVG(weight), 3) FROM Player"
 ]
 
 # Execute the commands one by one
