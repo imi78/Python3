@@ -36,6 +36,7 @@ num = 1
 for item in coll.find():
   print(str(num) + " " + "Collection")
   print("-----------------")
+  
   for k,v in item.items():
     if k != "_id":
       print(f"{k} : {v}")
