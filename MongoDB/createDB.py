@@ -1,7 +1,9 @@
 import pymongo
-str = input("MongoDB password:")  #"1qazxsw2!QAZXSW%"
-str1 = "mongodb+srv://imi78:"+str+"40@cluster0.1mwqk.mongodb.net/mydb?retryWrites=true&w=majority"
-client = pymongo.MongoClient(str1)
+import maskpass
+pwd = maskpass.askpass("MongoDB password:")  #"1qazxsw2!QAZXSW%
+
+str = "mongodb+srv://imi78:"+pwd+"40@cluster0.1mwqk.mongodb.net/mydb?retryWrites=true&w=majority"
+client = pymongo.MongoClient(str)
 
 # Get the available databases
 db = client.list_database_names()
