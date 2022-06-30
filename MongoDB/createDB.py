@@ -1,6 +1,6 @@
 import pymongo
 import maskpass
-pwd = maskpass.askpass("MongoDB password:")  #"1qazxsw2!QAZXSW%
+pwd = maskpass.askpass(prompt="MongoDB password:")  #"1qazxsw2!QAZXSW%
 
 str = "mongodb+srv://imi78:"+pwd+"40@cluster0.1mwqk.mongodb.net/mydb?retryWrites=true&w=majority"
 client = pymongo.MongoClient(str)
