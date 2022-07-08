@@ -1,7 +1,7 @@
 import sqlite3
 
 # Connect to the DB
-conn = sqlite3.connect('/home/ivo/Python/Python3/SQL/db.sqlite')
+conn = sqlite3.connect('/home/ivo/Python3/SQL/db.sqlite')
 
 # Cursor
 curr = conn.cursor()
