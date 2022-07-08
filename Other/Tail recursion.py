@@ -1,7 +1,11 @@
 def make_student_classifier(lower_bound, upper_bound):
     def classify_student(exam_dict):    # exam_dict takes the students dict as an argument
-        return {k:v for (k,v) in exam_dict.items() if lower_bound <= v < upper_bound}  # returns a dictionary with the specified condition
-    return classify_student   # function has to be returned in order to be accessibe to the outer funtion
+      
+        # returns a dictionary with the specified condition
+        return {k:v for (k,v) in exam_dict.items() if lower_bound <= v < upper_bound} 
+
+    # function has to be returned in order to be accessibe to the outer function
+    return classify_student   
     
 students = {
     'Alice': 98,
