@@ -1,11 +1,13 @@
-from collections import defaultdict
+import pandas as pd
+import sqlite3
 
-lst = ['luxuriant', 'silly', 'dizzy', 'frightening', 'blink', 'silly', 'enjoy', 'suspend', 'blink', 'reward', 'blink', 'fact', 'debt', 'marble', 'blink', 'yak', 'frightening', 'suspend', 'debt']
+conn = sqlite3.connect('/home/ivo/Python3/SQL/db.sqlite')
+curr = conn.cursor()
+curr.execute('SELECT player_name, height FROM Player')
+res = curr.fetchall()
+print(res)
 
-dct = defaultdict(str)
-for i in lst:
-    dct[i] += '*'
-  
+df = pd.DataFrame(res, columns=['Player name',  'Height'])
+print(df)
 
-for k, v in dct.items():
-    print(f"{k}| {v}")
+
