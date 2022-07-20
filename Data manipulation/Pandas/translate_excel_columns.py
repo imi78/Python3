@@ -19,7 +19,7 @@ def translate_excel_columns():
 
     rank = translit(str(rank), 'bg', reversed=True)
     
-    # if the value is NaN, replace cut the line
+    # if the value is NaN, replace and cut the line
     if rank == 'nan':
       rank = rank.replace('nan', "")
       continue
