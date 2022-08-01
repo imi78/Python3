@@ -1,4 +1,8 @@
-# import libraries
+# googletrans module requires specific version. Firls let's install this version drectly from script.
+import os
+os.system('pip install googletrans==3.1.0a0')
+
+# import the necessary libraries nd modules
 from transliterate import translit
 import openpyxl
 from googletrans import Translator
