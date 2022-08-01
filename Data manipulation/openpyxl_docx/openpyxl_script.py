@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Te program requires some modules installed before firrst use
+# THe program requires some modules installed before firrst use
 # googletrans module requires specific version, so we install it first
 # then install transliterate & openpyxl modules.
 # if this is the first time you are running this script, uncommment next four lines of code
