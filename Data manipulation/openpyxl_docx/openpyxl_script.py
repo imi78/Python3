@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Te program requires some modules installed before firrst use
 # googletrans module requires specific version, so we install it first
 # then install transliterate & openpyxl modules.
