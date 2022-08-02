@@ -5,10 +5,10 @@
 
 # If you are using Dockerimage, do not do anything!
 
-import os
-os.system('pip install googletrans==3.1.0a0')
-os.system('pip install transliterate')
-os.system('pip install openpyxl')
+# import os
+# os.system('pip install googletrans==3.1.0a0')
+# os.system('pip install transliterate')
+# os.system('pip install openpyxl')
 
 # import libraries
 from transliterate import translit
