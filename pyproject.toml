@@ -16,6 +16,12 @@ KivyMD-Components = "^0.1.6"
 "kivymd-extensions.akivymd" = "^1.2.6"
 exercise = "^0.1.1"
 pymongo = "^4.1.1"
+pandas = "^1.4.3"
+requests = "^2.28.1"
+transliterate = "^1.10.2"
+docx = "^0.2.4"
+googletrans = "^3.0.0"
+openpyxl = "^3.0.10"
 
 [tool.poetry.dev-dependencies]
 
