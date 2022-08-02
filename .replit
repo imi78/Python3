@@ -1,4 +1,4 @@
-run="python Projects/KivyMD/foo.py"
+run = "python Data\\ manipulation/openpyxl_docx/openpyxl_script.py"
 language="python3"
 
 [nix]
