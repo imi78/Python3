@@ -22,7 +22,6 @@ translator = Translator()
 
 # open and read excel file
 # ! change the path if necessary !
-
 wb = openpyxl.load_workbook('Data manipulation/openpyxl_docx/list.xlsx')
 ws = wb.active
 

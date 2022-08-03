@@ -1,8 +1,10 @@
-FROM python:3.8
+FROM python:latest
 
-COPY openpyxl_script.py list.xls .
+WORKDIR /Data manipulation/openpyxl_docx/
+
+COPY openpyxl_script.py list.xlsx ./
 
 RUN pip install transliterate openpyxl googletrans==3.1.0a0
 
-CMD ["python", "Data manipulation/openpyxl_docx/openpyxl_script.py"]
+CMD ["python", "./openpyxl_script.py"]
 
