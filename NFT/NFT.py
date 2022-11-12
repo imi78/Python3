@@ -173,16 +173,16 @@ print(hair_count)
 print(mouth_count)
 print(nose_count)
 
-os.mkdir(f'./images')
+os.mkdir(f'./NFT/substrapunks/images')
 
 for item in all_images:
 
-    im1 = Image.open(f'./scripts/face_parts/face/{face_files[item["Face"]]}.png').convert('RGBA')
-    im2 = Image.open(f'./scripts/face_parts/eyes/{eyes_files[item["Eyes"]]}.png').convert('RGBA')
-    im3 = Image.open(f'./scripts/face_parts/ears/{ears_files[item["Ears"]]}.png').convert('RGBA')
-    im4 = Image.open(f'./scripts/face_parts/hair/{hair_files[item["Hair"]]}.png').convert('RGBA')
-    im5 = Image.open(f'./scripts/face_parts/mouth/{mouth_files[item["Mouth"]]}.png').convert('RGBA')
-    im6 = Image.open(f'./scripts/face_parts/nose/{nose_files[item["Nose"]]}.png').convert('RGBA')
+    im1 = Image.open(f'./NFT/substrapunks/scripts/face_parts/face/{face_files[item["Face"]]}.png').convert('RGBA')
+    im2 = Image.open(f'./NFT/substrapunks/scripts/face_parts/eyes/{eyes_files[item["Eyes"]]}.png').convert('RGBA')
+    im3 = Image.open(f'./NFT/substrapunks/scripts/face_parts/ears/{ears_files[item["Ears"]]}.png').convert('RGBA')
+    im4 = Image.open(f'./NFT/substrapunks/scripts/face_parts/hair/{hair_files[item["Hair"]]}.png').convert('RGBA')
+    im5 = Image.open(f'./NFT/substrapunks/scripts/face_parts/mouth/{mouth_files[item["Mouth"]]}.png').convert('RGBA')
+    im6 = Image.open(f'./NFT/substrapunks/scripts/face_parts/nose/{nose_files[item["Nose"]]}.png').convert('RGBA')
 
     #Create each composite
     com1 = Image.alpha_composite(im1, im2)
@@ -196,4 +196,4 @@ for item in all_images:
     #Convert to RGB
     rgb_im = com5.convert('RGB')
     file_name = str(item["tokenId"]) + ".png"
-    rgb_im.save("./images/" + file_name)
+    rgb_im.save("./NFT/substrapunks/images/" + file_name)
