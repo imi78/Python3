@@ -44,9 +44,23 @@ for i, j in zip(range(0, len(lst13), 5), range(0, len(lst16), 5)):
         
         exit_diff = total_exit16  - total_exit13
         enter_diff = total_enter16 - total_enter13
-        d[bxp[:5]] = [exit_diff, enter_diff]
+        d[bxp[:4]] = [exit_diff, enter_diff]
+    
 # make the dataframe
 df = pd.DataFrame.from_dict(d, orient='index', columns=['Exiting', 'Entering'])
 # plot the data from DF with grid
 df.plot(y=['Exiting', 'Entering'], kind='bar', grid=True)
-plt.show()
+# sets the margins of subplots (figure is visible at all corners)
+plt.subplots_adjust(left=0.05,
+                    bottom=0.374,
+                    right=0.98,
+                    top=0.95,
+                    wspace=0.4,
+                    hspace=0.4)
+# get current figure
+figure = plt.gcf() 
+# set the figure to be expanded, so it can be visible
+figure.set_size_inches(13, 8)
+# saves the figure as picture
+plt.savefig('foo.jpg')
+# plt.show()
