@@ -2,7 +2,6 @@
 import pandas as pd
 from openpyxl import load_workbook
 import matplotlib.pyplot as plt
-from itertools import zip_longest
 #set the acive excel worksheets
 wb13 = load_workbook("13.xlsx").active
 wb16 = load_workbook("16.xlsx").active
