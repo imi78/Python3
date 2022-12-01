@@ -25,13 +25,10 @@ for i, j in zip(range(0, len(lst13), 5), range(0, len(lst16), 5)):
     bxp = lst13[i]
     if bxp.startswith("ОБЩО") == False:
         # variables are made for readability
-        exit13 = lst13[i + 2]
-        enter13 = lst13[i + 4]
-        exit16 = lst16[i + 2]
-        enter16 = lst16[i + 4]
-        exit_diff = exit16 - exit13
-        enter_diff = enter16 - enter13
-        
+        exit13, enter13 = lst13[i + 2], lst13[i + 4]
+        exit16, enter16 = lst16[i + 2], lst16[i + 4]
+        exit_diff, enter_diff = (exit16 - exit13), (enter16 - enter13)
+
         # put all the info in dict if greater than 3 digit number
         if exit_diff > 100 and enter_diff > 100:
             d[bxp[4:]] = [exit_diff,enter_diff]
@@ -39,13 +36,10 @@ for i, j in zip(range(0, len(lst13), 5), range(0, len(lst16), 5)):
     else:
         # this calculates the "Total" cell values
         # again, variables are made for readability
-        total_exit13 = lst13[i + 1]
-        total_enter13 = lst13[i + 3]
-        total_exit16 = lst16[i + 1]
-        total_enter16 = lst16[i + 3]
+        total_exit13, total_enter13 = lst13[i + 1], lst13[i + 3]
+        total_exit16, total_enter16 = lst16[i + 1], lst16[i + 3]
         
-        exit_diff = total_exit16  - total_exit13
-        enter_diff = total_enter16 - total_enter13
+        exit_diff, enter_diff = (total_exit16  - total_exit13), (total_enter16 - total_enter13)
         d[bxp[:4]] = [exit_diff, enter_diff]
 
 # make the dataframe
