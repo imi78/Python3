@@ -19,6 +19,7 @@ for col13, col16 in zip(wb13.iter_cols(min_row=4, min_col=2, max_row=7),
         # append the values to lists
         lst13.append(cell13.value)
         lst16.append(cell16.value)
+
 # iterate through lists and calculate the difference in the numbers
 for i, j in zip(range(0, len(lst13), 5), range(0, len(lst16), 5)):
     bxp = lst13[i]
@@ -29,14 +30,15 @@ for i, j in zip(range(0, len(lst13), 5), range(0, len(lst16), 5)):
         exit16 = lst16[i + 2]
         enter16 = lst16[i + 4]
         exit_diff = exit16 - exit13
-        enter_diff = exit16 - exit13
+        enter_diff = enter16 - enter13
         
-        # put all the info in dict
-        d[bxp] = [exit_diff,enter_diff]
+        # put all the info in dict if greater than 3 digit number
+        if exit_diff > 100 and enter_diff > 100:
+            d[bxp[4:]] = [exit_diff,enter_diff]
 
     else:
         # this calculates the "Total" cell values
-        # again, varuables are made for readability
+        # again, variables are made for readability
         total_exit13 = lst13[i + 1]
         total_enter13 = lst13[i + 3]
         total_exit16 = lst16[i + 1]
@@ -45,7 +47,7 @@ for i, j in zip(range(0, len(lst13), 5), range(0, len(lst16), 5)):
         exit_diff = total_exit16  - total_exit13
         enter_diff = total_enter16 - total_enter13
         d[bxp[:4]] = [exit_diff, enter_diff]
-    
+
 # make the dataframe
 df = pd.DataFrame.from_dict(d, orient='index', columns=['Exiting', 'Entering'])
 #reset the index by default
@@ -54,18 +56,22 @@ df.reset_index(inplace=True)
 df.columns = ['BXP', 'Exiting', 'Entering']
 
 # plot the data from DF with grid
-df.plot(x='BXP', y=['Exiting', 'Entering'], kind='bar', grid=True)
-# # sets the margins of subplots (figure is visible at all corners)
+ax = df.plot(x='BXP', y=['Exiting', 'Entering'], kind='bar', grid=True)
+ax.bar_label(ax.containers[0], label_type='edge', rotation=90, padding=5)
+ax.bar_label(ax.containers[1], label_type='edge', rotation=90, padding=5)
+# sets the margins of subplots (figure is visible at all corners)
 plt.subplots_adjust(left=0.05,
                     bottom=0.374,
                     right=0.98,
                     top=0.95,
                     wspace=0.4,
                     hspace=0.4)
+
 # get current figure
 figure = plt.gcf() 
-# # set the figure to be expanded, so it can be visible
+# set the figure to be expanded, so it can be visible
 figure.set_size_inches(13, 8)
-# # saves the figure as picture
-plt.savefig('foo.jpg')
-# plt.show()
+# saves the figure as picture
+# plt.savefig('foo.jpg')
+# or show it
+plt.show()
