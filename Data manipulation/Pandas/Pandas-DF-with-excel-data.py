@@ -51,7 +51,10 @@ df.columns = ['BXP', 'Exiting', 'Entering']
 
 # plot the data from DF with grid
 ax = df.plot(x='BXP', y=['Exiting', 'Entering'], kind='bar', grid=True)
+# sets the bar labels to be rotated for visibility
+# containers[0] - exiting
 ax.bar_label(ax.containers[0], label_type='edge', rotation=90, padding=5)
+# containers[1] - entering
 ax.bar_label(ax.containers[1], label_type='edge', rotation=90, padding=5)
 # sets the margins of subplots (figure is visible at all corners)
 plt.subplots_adjust(left=0.05,
