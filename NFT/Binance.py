@@ -19,8 +19,8 @@ print()
 
 key = 'https://api.binance.com/api/v3/ticker/price?symbol='
 
-currencies = ['RVNBUSD','LEVERBUSD', 'POLYXBUSD', 'GALBUSD', 'DIABUSD', 'SOLBUSD', 'LINKEUR']
-prices = [0.02423, 0.002077, 0.1471, 1.2838]
+currencies = ['RVNBUSD','TBUSD', 'POLYXBUSD', 'GALBUSD', 'DIABUSD', 'SOLBUSD', 'LINKEUR']
+prices = [0.02423, 0.0196, 0.1471, 1.2838]
 j = 0
 for i,k in zip_longest(currencies,prices):
     url = key+currencies[j]
