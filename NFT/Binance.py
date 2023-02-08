@@ -36,8 +36,15 @@ for i,k in zip_longest(currencies,prices):
     else:
         print(f"{symbol} -->  {price:.3f}\n")
         
-currency = ['LINK-EUR', 'XYO-EUR', 'DIA-EUR', 'SHIB-EUR', 'IOTX-EUR']
-for i in currency:
+currency = ['LINK-EUR', 'XYO-EUR', 'DIA-EUR', 'SHIB-EUR']
+price = [28, 0.05, 0.38, 0.00001319]
+
+for i, p in zip(currency,price):
     key1 = 'https://api.pro.coinbase.com/products/'+i+'/ticker'
     data = requests.get(key1).json()
-    print(f"{i} price --> {data['price']}\n")
+    print(f"{i} bought - {p}")
+    diff1 = float(data['price']) - p
+    print(f"price    --> {data['price']}")
+    print(f"Difference --> {round(diff1, 5)}")
+    print(f"In percentage --> {(diff1/p)*100:.2f}\n")
+    
