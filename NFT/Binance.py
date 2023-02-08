@@ -19,8 +19,8 @@ print()
 
 key = 'https://api.binance.com/api/v3/ticker/price?symbol='
 
-currencies = ['RVNBUSD','LEVERBUSD', 'POLYXBUSD', 'GALBUSD', 'BURGERBUSD', 'DIABUSD', 'LINKEUR']
-prices = [0.02423, 0.00207, 0.1471, 1.28380, 0.75000, 0.47600]
+currencies = ['RVNBUSD','LEVERBUSD', 'POLYXBUSD', 'GALBUSD', 'BURGERBUSD', 'DIABUSD', 'YFIEUR']
+prices = [0.02423, 0.00207, 0.1471, 1.28380, 0.75000, 0.47600, 7199]
 j = 0
 for i,k in zip_longest(currencies,prices):
     url = key+currencies[j]
@@ -32,11 +32,11 @@ for i,k in zip_longest(currencies,prices):
         print(f"price is         {price:.5f}")
         diff = price - k
         print(f"Difference --> {round(diff, 5)}")
-        print(f"In percentage --> {(diff/price)*100:.2f}\n")
+        print(f"In percentage --> {(diff/k)*100:.2f}\n")
     else:
         print(f"{symbol} -->  {price:.3f}\n")
         
-currency = ['WAMPL-USDT', 'XYO-EUR', 'SHPING-EUR']
+currency = ['LINK-EUR', 'XYO-EUR', 'DIA-EUR', 'SHIB-EUR', 'IOTX-EUR']
 for i in currency:
     key1 = 'https://api.pro.coinbase.com/products/'+i+'/ticker'
     data = requests.get(key1).json()
