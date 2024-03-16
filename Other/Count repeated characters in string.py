@@ -11,3 +11,13 @@ for i in a:
             d[j] += 1
         count +=1
     count =1
+
+
+# l = ['aabbcc', 'ddeff', 'ghijkk']
+# d = {}
+# for i in l:
+#     for j in i:
+#         d[j] = d.get(j, 0) + 1
+
+# for k,v in d.items():
+#     print(f"{k} --> {v}")
